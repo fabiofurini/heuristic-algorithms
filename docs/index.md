@@ -18,7 +18,7 @@ professor at [DIAG](https://www.diag.uniroma1.it/), Sapienza University of Rome.
 
 **The course lecture notes, online**: heuristic algorithms for combinatorial optimization problems, that is, primal and dual bounds and the evaluation of heuristics, constructive heuristics, local search, metaheuristics and MIP heuristics, applied to knapsack, packing, routing, scheduling and coloring problems; with definitions, examples worked out step by step, exercises with solutions, Colab notebooks and interactive apps.
 
-Prerequisites: [Combinatorial Optimization](https://fabiofurini.github.io/combinatorial-optimization/) for the problems, their instances and their formulations.
+Prerequisites: [Combinatorial Optimization Problems](https://fabiofurini.github.io/combinatorial-optimization/) for the problems, their instances and their formulations.
 
 [Start :material-arrow-right:](heuristics.md){ .md-button .md-button--primary }
 [:material-pencil: Exercises](exercises/index.md){ .md-button }

@@ -5,7 +5,7 @@
 
 - **Website and PDF.** Each chapter of the website is a chapter of the lecture notes, with the same numbers and the same colors; long chapters are split into one page per section.
 - **At the top of each chapter** a bar with the PDF of the lecture notes, the slides, the exercises and the apps of the chapter; at the bottom, the link to the exercises.
-- **The problems.** Definitions, instances and formulations of the problems are in the course [Combinatorial Optimization](https://fabiofurini.github.io/combinatorial-optimization/): the chapters link to them.
+- **The problems.** Definitions, instances and formulations of the problems are in the course [Combinatorial Optimization Problems](https://fabiofurini.github.io/combinatorial-optimization/): the chapters link to them.
 - **The code.** On the pages the algorithms are in pseudo-code; the «Run in Colab» buttons open the notebook with the code in Python and C++.
 
 The boxes have the same colors as in the lecture notes:

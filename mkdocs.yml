@@ -54,7 +54,7 @@ not_in_nav: |
 plugins:
   - search:
       lang: en
-  # old URLs of pages of these chapters (from Combinatorial Optimization, without the part folder)
+  # old URLs of pages of these chapters (from Combinatorial Optimization Problems, without the part folder)
   - redirects:
       redirect_maps:
         # 2026-10-12: the KP is the «0/1 knapsack problem» (knapsack problems are the family)
@@ -104,7 +104,7 @@ extra:
       name: Network Optimization
     - icon: material/hexagon-multiple-outline
       link: https://fabiofurini.github.io/combinatorial-optimization/
-      name: Combinatorial Optimization
+      name: Combinatorial Optimization Problems
   alternate:
     - name: Italiano
       link: https://fabiofurini.github.io/algoritmi-euristici/
@@ -112,7 +112,7 @@ extra:
 
 extra_css:
   - stylesheets/collana.css
-  - stylesheets/extra.css?v=a25c6f8414
+  - stylesheets/extra.css?v=ff8e75aca3
   - https://cdn.jsdelivr.net/npm/jsxgraph@1.10.1/distrib/jsxgraph.css
   - stylesheets/interattivi.css?v=c51ac2286b
   - stylesheets/quiz.css?v=9e3792b41c
@@ -136,16 +136,16 @@ markdown_extensions:
 
 extra_javascript:
   - javascripts/cloudflare-analytics.js?v=bff73345a1
-  - javascripts/mathjax.js?v=2f2f0d6685
+  - javascripts/mathjax.js?v=01373df78e
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js
   # grafici interattivi: JSXGraph, il motore, poi le ricette (gi-*.js, le aggiunge genera_sito.py)
   - https://cdn.jsdelivr.net/npm/jsxgraph@1.10.1/distrib/jsxgraphcore.js
-  - javascripts/interattivi.js?v=2687ca69e3
+  - javascripts/interattivi.js?v=39321dc727
   - javascripts/gi-comune.js?v=40df75e3e5
-  - javascripts/gi-oc-0.js?v=bba7b765ee
-  - javascripts/gi-oc-a.js?v=bcbc333a91
-  - javascripts/gi-oc-b.js?v=bec7102113
-  - javascripts/gi-oc-f.js?v=f66a4dfe0f
+  - javascripts/gi-oc-0.js?v=5fb9f2eb4c
+  - javascripts/gi-oc-a.js?v=1e3247b206
+  - javascripts/gi-oc-b.js?v=8594d977af
+  - javascripts/gi-oc-f.js?v=fd82cb1fb8
   - javascripts/quiz.js?v=be7fae2b85
 
 

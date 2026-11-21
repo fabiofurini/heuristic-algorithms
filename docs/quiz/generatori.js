@@ -1,5 +1,5 @@
 // Autovalutazione — domande generate del modulo «Algoritmi euristici» (heuristic-algorithms).
-// Copiate dalla banca di Ottimizzazione combinatoria il 21/11/2026 (i generatori dei capitoli delle euristiche).
+// Copiate dalla banca di Problemi di ottimizzazione combinatoria il 21/11/2026 (i generatori dei capitoli delle euristiche).
 // Formato: QUIZ_SPEC.md. Ogni generatore riceve rng() in [0,1) e la lingua ("it" | "en") e restituisce
 // { testo, opzioni[4], corretta, spiegazione, _v }. Il campo _v (dati dell'istanza e valori delle opzioni)
 // serve solo al gemello di verifica in Python (quiz/verifica/): il motore lo ignora.

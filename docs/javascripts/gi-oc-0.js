@@ -1,4 +1,4 @@
-/* Laboratorio di «Algoritmi euristici / Heuristic Algorithms» (copiato da Ottimizzazione combinatoria): strumenti comuni delle ricette.
+/* Laboratorio di «Algoritmi euristici / Heuristic Algorithms» (copiato da Problemi di ottimizzazione combinatoria): strumenti comuni delle ricette.
  *
  * Si carica dopo interattivi.js (window.GI) e gi-comune.js (window.GI_MIP) e prima delle ricette
  * gi-oc-a.js, gi-oc-b.js, gi-oc-f.js, che li trovano in window.GI_OC. Vengono dal laboratorio di Modellazione MIP

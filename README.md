@@ -4,6 +4,6 @@ Lecture notes on heuristic algorithms for combinatorial optimization problems: p
 
 **Website: [fabiofurini.github.io/heuristic-algorithms](https://fabiofurini.github.io/heuristic-algorithms/)**
 
-Prerequisites: [Combinatorial Optimization](https://fabiofurini.github.io/combinatorial-optimization/) (the problems, their instances and their formulations).
+Prerequisites: [Combinatorial Optimization Problems](https://fabiofurini.github.io/combinatorial-optimization/) (the problems, their instances and their formulations).
 
 Part of the series *Operations Research and Mathematics* by [Fabio Furini](https://fabiofurini.github.io/) (DIAG, Sapienza University of Rome). Contents CC BY 4.0, code MIT.

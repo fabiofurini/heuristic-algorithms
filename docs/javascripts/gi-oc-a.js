@@ -4,7 +4,7 @@
  *
  * Grafi: grafo di Petersen e grafo a corona G_4 (vertici u_i = 2i-1, v_i = 2i, spigoli {2i-1, 2j} con i ≠ j).
  * Le funzioni di calcolo sono anche in window.GI_OC_A, per le prove.
- * Copiato da Ottimizzazione combinatoria (gi-oc-a.js, sezione 3) il 2026-11-21.
+ * Copiato da Problemi di ottimizzazione combinatoria (gi-oc-a.js, sezione 3) il 2026-11-21.
  */
 (function () {
   "use strict";

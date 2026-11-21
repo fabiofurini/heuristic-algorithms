@@ -1,4 +1,4 @@
-/* Laboratorio di «Algoritmi euristici / Heuristic Algorithms» (copiato da Ottimizzazione combinatoria): algoritmi euristici.
+/* Laboratorio di «Algoritmi euristici / Heuristic Algorithms» (copiato da Problemi di ottimizzazione combinatoria): algoritmi euristici.
  *
  *   oc-bin-packing   bin packing: Next Fit, First Fit, Best Fit, Worst Fit, First Fit Decreasing, passo per passo,
  *                    con il bound ⌈Σ w_j / c⌉, l'ottimo e la modalità «Batti l'algoritmo» (impacchetti tu)

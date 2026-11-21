@@ -12,7 +12,7 @@ title: "Heuristic algorithms: definitions"
 
 !!! nota "Prerequisites"
 
-    - From the module <em>Combinatorial Optimization</em>, the [0/1 knapsack problem](https://fabiofurini.github.io/combinatorial-optimization/combinatorial-optimization-problems/knapsack/the-0-1-knapsack-problem/), the [bin packing problem](https://fabiofurini.github.io/combinatorial-optimization/combinatorial-optimization-problems/bin-packing/the-bin-packing-problem/), the [travelling salesman problem](https://fabiofurini.github.io/combinatorial-optimization/combinatorial-optimization-problems/tsp/the-travelling-salesman-problem/) and [$P\,||\,C_{\max}$](https://fabiofurini.github.io/combinatorial-optimization/combinatorial-optimization-problems/pcmax/scheduling-on-identical-parallel-machines/): instances, feasible solutions and optimal values of the four problems used as examples.
+    - From the module <em>Combinatorial Optimization Problems</em>, the [0/1 knapsack problem](https://fabiofurini.github.io/combinatorial-optimization/combinatorial-optimization-problems/knapsack/the-0-1-knapsack-problem/), the [bin packing problem](https://fabiofurini.github.io/combinatorial-optimization/combinatorial-optimization-problems/bin-packing/the-bin-packing-problem/), the [travelling salesman problem](https://fabiofurini.github.io/combinatorial-optimization/combinatorial-optimization-problems/tsp/the-travelling-salesman-problem/) and [$P\,||\,C_{\max}$](https://fabiofurini.github.io/combinatorial-optimization/combinatorial-optimization-problems/pcmax/scheduling-on-identical-parallel-machines/): instances, feasible solutions and optimal values of the four problems used as examples.
 
     - From the module <em>Integer linear programming</em>, [Chapter 2 «LP relaxation»](https://fabiofurini.github.io/integer-linear-programming/models-and-bounds/lp-relaxation/): the LP relaxation as a source of dual bounds. A short recap is given here for the 0/1 knapsack problem.
 
@@ -182,7 +182,7 @@ title: "Heuristic algorithms: definitions"
     \end{cases}
     $$
 
-- The <strong>gap</strong> of a heuristic value $\mathscr{A}(I)$ is the relative gap $\frac{\UB-\LB}{\LB}$ defined in the module <em>Combinatorial Optimization</em>, [«Primal bounds, dual bounds and gap»](https://fabiofurini.github.io/combinatorial-optimization/combinatorial-optimization-problems/combinatorial-optimization/primal-bounds-dual-bounds-and-gap/): the difference of the two bounds divided by the <strong>lower</strong> one. With the heuristic value in place of the primal bound it reads
+- The <strong>gap</strong> of a heuristic value $\mathscr{A}(I)$ is the relative gap $\frac{\UB-\LB}{\LB}$ defined in the module <em>Combinatorial Optimization Problems</em>, [«Primal bounds, dual bounds and gap»](https://fabiofurini.github.io/combinatorial-optimization/combinatorial-optimization-problems/combinatorial-optimization/primal-bounds-dual-bounds-and-gap/): the difference of the two bounds divided by the <strong>lower</strong> one. With the heuristic value in place of the primal bound it reads
 
     $$
     gap(I) =

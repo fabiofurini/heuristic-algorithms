@@ -5,7 +5,7 @@
  *                   note e nel codice C++ (SimulatedAnnealingTSP.cpp, TabuSearchTSP.cpp): con seed = 1 le prime
  *                   iterazioni rifanno l'esempio del capitolo (25 → 29 → 22 → 24 → 18).
  *
- * Copiato da Ottimizzazione combinatoria (gi-oc-f.js, sezioni 0 e 1) il 2026-11-21.
+ * Copiato da Problemi di ottimizzazione combinatoria (gi-oc-f.js, sezioni 0 e 1) il 2026-11-21.
  * Formato delle ricette: commento in testa a interattivi.js; strumenti comuni in gi-comune.js e gi-oc-0.js.
  */
 (function () {
