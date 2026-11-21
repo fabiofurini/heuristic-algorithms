@@ -11070,6 +11070,1716 @@
     ],
     "spiegazione": "Dantzig's solution has at most one fractional variable, here $x_3=\\frac46=\\frac23$; MIP heuristics start from this solution to find integer solutions."
    }
+  },
+  {
+   "id": "eh-f-370",
+   "livello": "teorema",
+   "capitolo": "heuristics",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/heuristics/#box-12-def-exact",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/heuristics/#box-12-def-exact"
+   },
+   "corretta": 0,
+   "it": {
+    "testo": "Un intorno $N$ è esatto: ogni ottimo locale rispetto a $N$ è un ottimo globale. Una ricerca locale con l'intorno $N$ si ferma nella soluzione $S$. Che cosa si può concludere?",
+    "opzioni": [
+     "$S$ è una soluzione ottima",
+     "$S$ è ottima solo con best improvement",
+     "$S$ ha gap nullo solo se c'è un bound duale",
+     "Nulla: l'esattezza riguarda la grandezza dell'intorno"
+    ],
+    "spiegazione": "La ricerca locale si ferma in un ottimo locale rispetto a $N$ e, per definizione di intorno esatto, ogni ottimo locale è globale. La regola di scelta del vicino non conta."
+   },
+   "en": {
+    "testo": "A neighbourhood $N$ is exact: every local optimum with respect to $N$ is a global optimum. A local search with neighbourhood $N$ stops at the solution $S$. What can be concluded?",
+    "opzioni": [
+     "$S$ is an optimal solution",
+     "$S$ is optimal only with best improvement",
+     "$S$ has zero gap only with a dual bound",
+     "Nothing: exactness concerns the size of $N$"
+    ],
+    "spiegazione": "The local search stops at a local optimum with respect to $N$ and, by definition of exact neighbourhood, every local optimum is global. The rule used to choose the neighbour does not matter."
+   }
+  },
+  {
+   "id": "eh-f-371",
+   "livello": "teorema",
+   "capitolo": "heuristics",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/heuristics/#box-6-prop-gap",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/heuristics/#box-6-prop-gap"
+   },
+   "corretta": 3,
+   "it": {
+    "testo": "Problema di minimo, valori positivi: un'euristica trova $\\mathscr{A}(I)=12$ e un bound duale vale $\\mathrm{LB}(I)=10$. Che cosa garantisce la proposizione sul gap per l'errore relativo $\\frac{\\mathscr{A}(I)-z(I)}{z(I)}$?",
+    "opzioni": [
+     "È al più $16{,}7\\%$",
+     "È esattamente $20\\%$",
+     "È almeno $20\\%$",
+     "È al più $20\\%$"
+    ],
+    "spiegazione": "$gap(I)=\\frac{12-10}{10}=20\\%$ e l'errore relativo è al più il gap, perché $10\\le z(I)\\le 12$. $16{,}7\\%$ divide per il bound maggiore; l'errore è $20\\%$ solo se $z(I)=10$."
+   },
+   "en": {
+    "testo": "Minimization problem with positive values: a heuristic finds $\\mathscr{A}(I)=12$ and a dual bound is $\\mathrm{LB}(I)=10$. What does the proposition on the gap guarantee for the relative error $\\frac{\\mathscr{A}(I)-z(I)}{z(I)}$?",
+    "opzioni": [
+     "It is at most $16.7\\%$",
+     "It is exactly $20\\%$",
+     "It is at least $20\\%$",
+     "It is at most $20\\%$"
+    ],
+    "spiegazione": "$gap(I)=\\frac{12-10}{10}=20\\%$ and the relative error is at most the gap, since $10\\le z(I)\\le 12$. $16.7\\%$ divides by the larger bound; the error is $20\\%$ only if $z(I)=10$."
+   }
+  },
+  {
+   "id": "eh-f-372",
+   "livello": "teorema",
+   "capitolo": "heuristics",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/heuristics/#box-8-prop-twoedges",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/heuristics/#box-8-prop-twoedges"
+   },
+   "corretta": 2,
+   "it": {
+    "testo": "TSP con $5$ città e distanze intere: le somme $a_i+b_i$ delle due distanze più piccole da ogni città valgono $6,7,7,8,9$. Che cosa dà il bound delle due distanze minime?",
+    "opzioni": [
+     "$z(I)\\ge 18$",
+     "$z(I)\\le 19$",
+     "$z(I)\\ge 19$",
+     "$z(I)\\ge 37$"
+    ],
+    "spiegazione": "$z(I)\\ge\\lceil\\frac12(6+7+7+8+9)\\rceil=\\lceil 18{,}5\\rceil=19$: ogni città ha due lati del giro, e ogni lato è contato da due città. È un bound inferiore, non superiore."
+   },
+   "en": {
+    "testo": "TSP with $5$ cities and integer distances: the sums $a_i+b_i$ of the two smallest distances from each city are $6,7,7,8,9$. What does the two-smallest-distances bound give?",
+    "opzioni": [
+     "$z(I)\\ge 18$",
+     "$z(I)\\le 19$",
+     "$z(I)\\ge 19$",
+     "$z(I)\\ge 37$"
+    ],
+    "spiegazione": "$z(I)\\ge\\lceil\\frac12(6+7+7+8+9)\\rceil=\\lceil 18.5\\rceil=19$: every city has two tour edges, and every edge is counted by two cities. It is a lower bound, not an upper bound."
+   }
+  },
+  {
+   "id": "eh-f-373",
+   "livello": "teorema",
+   "capitolo": "heuristics",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/heuristics/#box-10-def-localopt",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/heuristics/#box-10-def-localopt"
+   },
+   "corretta": 1,
+   "it": {
+    "testo": "Quale affermazione vale per ogni intorno $N$ di un problema di ottimizzazione?",
+    "opzioni": [
+     "Un ottimo locale rispetto a $N$ non ha vicini",
+     "Ogni soluzione ottima è un ottimo locale rispetto a $N$",
+     "Ogni ottimo locale rispetto a $N$ è una soluzione ottima",
+     "Due ottimi locali rispetto a $N$ hanno lo stesso valore"
+    ],
+    "spiegazione": "Nessuna soluzione è migliore di un ottimo globale, quindi nemmeno i suoi vicini: è un ottimo locale per ogni intorno. Il viceversa vale solo per gli intorni esatti."
+   },
+   "en": {
+    "testo": "Which statement holds for every neighbourhood $N$ of an optimization problem?",
+    "opzioni": [
+     "A local optimum for $N$ has no neighbours",
+     "Every optimal solution is a local optimum for $N$",
+     "Every local optimum for $N$ is an optimal solution",
+     "Two local optima for $N$ have the same value"
+    ],
+    "spiegazione": "No solution is better than a global optimum, hence neither are its neighbours: it is a local optimum for every neighbourhood. The converse holds only for exact neighbourhoods."
+   }
+  },
+  {
+   "id": "eh-f-374",
+   "livello": "teorema",
+   "capitolo": "heuristics",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/heuristics/#box-6-prop-gap",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/heuristics/#box-6-prop-gap"
+   },
+   "corretta": 0,
+   "it": {
+    "testo": "Problema di massimo: un'euristica trova $\\mathscr{A}(I)=40$ e un bound duale vale $\\mathrm{UB}(I)=50$. Quanto vale il gap e che cosa garantisce?",
+    "opzioni": [
+     "$25\\%$: l'errore relativo di $40$ è al più $25\\%$",
+     "$20\\%$: l'errore relativo è almeno $20\\%$",
+     "$25\\%$: quindi $z(I)=50$",
+     "$20\\%$: il gap si divide per $\\mathrm{UB}(I)$"
+    ],
+    "spiegazione": "Il gap divide per il bound minore, qui il valore euristico: $\\frac{50-40}{40}=25\\%$, e l'errore relativo è al più il gap. Il valore ottimo sta fra $40$ e $50$, non è per forza $50$."
+   },
+   "en": {
+    "testo": "Maximization problem: a heuristic finds $\\mathscr{A}(I)=40$ and a dual bound is $\\mathrm{UB}(I)=50$. What is the gap, and what does it guarantee?",
+    "opzioni": [
+     "$25\\%$: the relative error of $40$ is at most $25\\%$",
+     "$20\\%$: the relative error is at least $20\\%$",
+     "$25\\%$: hence $z(I)=50$",
+     "$20\\%$: the gap is divided by $\\mathrm{UB}(I)$"
+    ],
+    "spiegazione": "The gap divides by the smaller bound, here the heuristic value: $\\frac{50-40}{40}=25\\%$, and the relative error is at most the gap. The optimal value lies between $40$ and $50$, it is not necessarily $50$."
+   }
+  },
+  {
+   "id": "eh-f-375",
+   "livello": "ipotesi",
+   "capitolo": "heuristics",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/heuristics/#box-6-prop-gap",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/heuristics/#box-6-prop-gap"
+   },
+   "corretta": 3,
+   "it": {
+    "testo": "La proposizione «l'errore relativo di $\\mathscr{A}$ su $I$ è al più $gap(I)$», con $gap(I)=\\frac{\\mathrm{UB}-\\mathrm{LB}}{\\mathrm{LB}}$, quale ipotesi sui valori richiede?",
+    "opzioni": [
+     "L'euristica è una ricerca locale con un intorno esatto",
+     "Il problema è di massimo e non di minimo",
+     "I dati dell'istanza sono tutti interi",
+     "Il bound minore $\\mathrm{LB}(I)$ è positivo"
+    ],
+    "spiegazione": "Il gap divide per il bound minore: serve $\\mathrm{LB}(I)>0$ (valori positivi). Vale per ogni euristica, per problemi di minimo e di massimo, con dati qualsiasi."
+   },
+   "en": {
+    "testo": "The proposition «the relative error of $\\mathscr{A}$ on $I$ is at most $gap(I)$», with $gap(I)=\\frac{\\mathrm{UB}-\\mathrm{LB}}{\\mathrm{LB}}$, which assumption on the values does it need?",
+    "opzioni": [
+     "The heuristic is a local search with an exact neighbourhood",
+     "The problem is a maximization problem",
+     "All the data of the instance are integers",
+     "The smaller bound $\\mathrm{LB}(I)$ is positive"
+    ],
+    "spiegazione": "The gap divides by the smaller bound: $\\mathrm{LB}(I)>0$ is needed (positive values). It holds for every heuristic, for minimization and maximization problems, with any data."
+   }
+  },
+  {
+   "id": "eh-f-376",
+   "livello": "ipotesi",
+   "capitolo": "heuristics",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/heuristics/#box-8-prop-twoedges",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/heuristics/#box-8-prop-twoedges"
+   },
+   "corretta": 2,
+   "it": {
+    "testo": "Nel bound $z(I)\\ge\\lceil\\frac12\\sum_i(a_i+b_i)\\rceil$ del TSP, perché si può arrotondare per eccesso?",
+    "opzioni": [
+     "Il numero di città è pari",
+     "Il giro parte sempre dalla città $1$",
+     "Le distanze sono intere, quindi lo è $z(I)$",
+     "Le distanze rispettano la disuguaglianza triangolare"
+    ],
+    "spiegazione": "Con distanze intere la lunghezza di ogni giro è intera, e un intero non minore di $18{,}5$ è almeno $19$. La disuguaglianza triangolare non serve, e la città di partenza non conta."
+   },
+   "en": {
+    "testo": "In the TSP bound $z(I)\\ge\\lceil\\frac12\\sum_i(a_i+b_i)\\rceil$, why can the value be rounded up?",
+    "opzioni": [
+     "The number of cities is even",
+     "The tour always starts at city $1$",
+     "The distances are integers, and so is $z(I)$",
+     "The distances satisfy the triangle inequality"
+    ],
+    "spiegazione": "With integer distances every tour has integer length, and an integer not smaller than $18.5$ is at least $19$. The triangle inequality is not needed, and the starting city does not matter."
+   }
+  },
+  {
+   "id": "eh-f-377",
+   "livello": "ipotesi",
+   "capitolo": "heuristics",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/heuristics/#box-1-def-heuristic",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/heuristics/#box-1-def-heuristic"
+   },
+   "corretta": 1,
+   "it": {
+    "testo": "Che cosa richiede la definizione di algoritmo euristico per un problema di ottimizzazione $\\mathscr{P}$?",
+    "opzioni": [
+     "Un tempo di calcolo lineare nella dimensione",
+     "Una soluzione ammissibile per ogni istanza",
+     "Una soluzione ottima almeno sulle istanze piccole",
+     "Una garanzia sul rapporto con l'ottimo"
+    ],
+    "spiegazione": "Un'euristica calcola una soluzione ammissibile di ogni istanza, senza garantire che sia ottima. La garanzia sul caso peggiore è propria degli algoritmi di approssimazione."
+   },
+   "en": {
+    "testo": "What does the definition of heuristic algorithm for an optimization problem $\\mathscr{P}$ require?",
+    "opzioni": [
+     "A running time linear in the input size",
+     "A feasible solution for every instance",
+     "An optimal solution at least on small instances",
+     "A guarantee on the ratio with the optimum"
+    ],
+    "spiegazione": "A heuristic computes a feasible solution of every instance, without guaranteeing that it is optimal. A worst-case guarantee is typical of approximation algorithms."
+   }
+  },
+  {
+   "id": "eh-f-378",
+   "livello": "ipotesi",
+   "capitolo": "heuristics",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/heuristics/#box-9-def-neigh",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/heuristics/#box-9-def-neigh"
+   },
+   "corretta": 0,
+   "it": {
+    "testo": "Un intorno associa a ogni soluzione ammissibile $S$ un insieme $N(S)$ di vicini. Che cosa si richiede ai vicini?",
+    "opzioni": [
+     "Che siano soluzioni ammissibili",
+     "Che siano migliori di $S$",
+     "Che differiscano da $S$ in una variabile",
+     "Che siano ottimi locali"
+    ],
+    "spiegazione": "$N(S)\\subseteq\\mathscr{F}(I)$: i vicini sono soluzioni ammissibili. Non devono essere migliori, e la mossa che li produce dipende dall'intorno scelto."
+   },
+   "en": {
+    "testo": "A neighbourhood associates with every feasible solution $S$ a set $N(S)$ of neighbours. What is required of the neighbours?",
+    "opzioni": [
+     "They are feasible solutions",
+     "They are better than $S$",
+     "They differ from $S$ in one variable",
+     "They are local optima"
+    ],
+    "spiegazione": "$N(S)\\subseteq\\mathscr{F}(I)$: the neighbours are feasible solutions. They need not be better, and the move that produces them depends on the chosen neighbourhood."
+   }
+  },
+  {
+   "id": "eh-f-379",
+   "livello": "ipotesi",
+   "capitolo": "heuristics",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/heuristics/#box-10-def-localopt",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/heuristics/#box-10-def-localopt"
+   },
+   "corretta": 3,
+   "it": {
+    "testo": "Problema di massimo con funzione obiettivo $f$. Quando $S$ è un ottimo locale rispetto all'intorno $N$?",
+    "opzioni": [
+     "Se $f(S)>f(S')$ per ogni $S'\\in N(S)$",
+     "Se $f(S)\\ge f(S')$ per almeno un $S'\\in N(S)$",
+     "Se $f(S)\\le f(S')$ per ogni $S'\\in N(S)$",
+     "Se $f(S)\\ge f(S')$ per ogni $S'\\in N(S)$"
+    ],
+    "spiegazione": "Nessun vicino è migliore: $f(S)\\ge f(S')$ per tutti i vicini. La disuguaglianza non deve essere stretta (vicini di pari valore sono ammessi); $\\le$ è la condizione per i problemi di minimo."
+   },
+   "en": {
+    "testo": "Maximization problem with objective function $f$. When is $S$ a local optimum with respect to the neighbourhood $N$?",
+    "opzioni": [
+     "If $f(S)>f(S')$ for all $S'\\in N(S)$",
+     "If $f(S)\\ge f(S')$ for some $S'\\in N(S)$",
+     "If $f(S)\\le f(S')$ for all $S'\\in N(S)$",
+     "If $f(S)\\ge f(S')$ for all $S'\\in N(S)$"
+    ],
+    "spiegazione": "No neighbour is better: $f(S)\\ge f(S')$ for all neighbours. The inequality need not be strict (neighbours of equal value are allowed); $\\le$ is the condition for minimization problems."
+   }
+  },
+  {
+   "id": "eh-f-380",
+   "livello": "ipotesi",
+   "capitolo": "heuristics",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/heuristics/#box-6-prop-gap",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/heuristics/#box-6-prop-gap"
+   },
+   "corretta": 2,
+   "it": {
+    "testo": "Problema di minimo: il valore euristico $\\mathscr{A}(I)$ è uguale a un bound duale $\\mathrm{LB}(I)$. Che cosa si conclude, e su che cosa si basa?",
+    "opzioni": [
+     "Nulla: il gap è nullo ma l'errore no",
+     "$\\mathscr{A}(I)=z(I)$ solo con dati interi",
+     "$\\mathscr{A}(I)$ è ottimo, perché $\\mathrm{LB}(I)\\le z(I)$",
+     "$\\mathscr{A}(I)$ è ottimo solo se l'euristica è esatta"
+    ],
+    "spiegazione": "$\\mathrm{LB}(I)\\le z(I)\\le\\mathscr{A}(I)=\\mathrm{LB}(I)$: la soluzione è ottima e lo certifica il bound duale. Non servono altre ipotesi sull'euristica o sui dati."
+   },
+   "en": {
+    "testo": "Minimization problem: the heuristic value $\\mathscr{A}(I)$ equals a dual bound $\\mathrm{LB}(I)$. What can be concluded, and on what is it based?",
+    "opzioni": [
+     "Nothing: the gap is zero but the error is not",
+     "$\\mathscr{A}(I)=z(I)$ only with integer data",
+     "$\\mathscr{A}(I)$ is optimal, since $\\mathrm{LB}(I)\\le z(I)$",
+     "$\\mathscr{A}(I)$ is optimal only if the heuristic is exact"
+    ],
+    "spiegazione": "$\\mathrm{LB}(I)\\le z(I)\\le\\mathscr{A}(I)=\\mathrm{LB}(I)$: the solution is optimal, certified by the dual bound. No other assumption on the heuristic or on the data is needed."
+   }
+  },
+  {
+   "id": "eh-f-381",
+   "livello": "teorema",
+   "capitolo": "constructive-heuristics",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/constructive-heuristics/scheduling-su-macchine-parallele-prima-i-lavori-piu-lunghi/#box-8-prop-graham66",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/constructive-heuristics/scheduling-on-parallel-machines-longest-jobs-first/#box-8-prop-graham66"
+   },
+   "corretta": 2,
+   "it": {
+    "testo": "Con $m=4$ macchine identiche, quale fattore garantisce il risultato di Graham per $LIST$ (qualunque lista), e quale quello per $LPT$?",
+    "opzioni": [
+     "$\\frac74$ per tutti e due",
+     "$\\frac54$ per $LIST$, $\\frac74$ per $LPT$",
+     "$\\frac74$ per $LIST$, $\\frac54$ per $LPT$",
+     "$2$ per $LIST$, $\\frac43$ per $LPT$"
+    ],
+    "spiegazione": "$2-\\frac1m=\\frac74$ e $\\frac43-\\frac1{3m}=\\frac43-\\frac1{12}=\\frac54$. I fattori $2$ e $\\frac43$ sono i limiti per $m$ che cresce; ordinare i lavori migliora la garanzia."
+   },
+   "en": {
+    "testo": "With $m=4$ identical machines, which factor does Graham's result guarantee for $LIST$ (any list), and which one for $LPT$?",
+    "opzioni": [
+     "$\\frac74$ for both",
+     "$\\frac54$ for $LIST$, $\\frac74$ for $LPT$",
+     "$\\frac74$ for $LIST$, $\\frac54$ for $LPT$",
+     "$2$ for $LIST$, $\\frac43$ for $LPT$"
+    ],
+    "spiegazione": "$2-\\frac1m=\\frac74$ and $\\frac43-\\frac1{3m}=\\frac43-\\frac1{12}=\\frac54$. The factors $2$ and $\\frac43$ are the limits as $m$ grows; sorting the jobs improves the guarantee."
+   }
+  },
+  {
+   "id": "eh-f-382",
+   "livello": "teorema",
+   "capitolo": "constructive-heuristics",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/constructive-heuristics/colorazione-dei-vertici-greedy-e-dsatur/#box-18-prop-GCDelta",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/constructive-heuristics/vertex-coloring-greedy-and-dsatur/#box-18-prop-GCDelta"
+   },
+   "corretta": 1,
+   "it": {
+    "testo": "Un grafo $G$ ha grado massimo $\\Delta(G)=4$. Quanti colori usa al più la colorazione greedy $GC$, qualunque sia la lista dei vertici?",
+    "opzioni": [
+     "$2\\Delta(G)$",
+     "$5$",
+     "$4$",
+     "$\\chi(G)+1$"
+    ],
+    "spiegazione": "$GC(I)\\le\\Delta(G)+1=5$ per ogni lista: quando un vertice si colora, al più $4$ vicini hanno già un colore. $\\chi(G)+1$ non è garantito (grafo a corona)."
+   },
+   "en": {
+    "testo": "A graph $G$ has maximum degree $\\Delta(G)=4$. At most how many colors does the greedy coloring $GC$ use, whatever the list of vertices?",
+    "opzioni": [
+     "$2\\Delta(G)$",
+     "$5$",
+     "$4$",
+     "$\\chi(G)+1$"
+    ],
+    "spiegazione": "$GC(I)\\le\\Delta(G)+1=5$ for every list: when a vertex is colored, at most $4$ neighbours already have a color. $\\chi(G)+1$ is not guaranteed (crown graph)."
+   }
+  },
+  {
+   "id": "eh-f-383",
+   "livello": "teorema",
+   "capitolo": "constructive-heuristics",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/constructive-heuristics/colorazione-dei-vertici-greedy-e-dsatur/#box-19-prop-crown",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/constructive-heuristics/vertex-coloring-greedy-and-dsatur/#box-19-prop-crown"
+   },
+   "corretta": 0,
+   "it": {
+    "testo": "Sul grafo a corona $G_k$ ($n=2k$ vertici, $\\chi(G_k)=2$) la colorazione greedy, con una lista opportuna, usa $k=\\frac n2$ colori. Che cosa mostra questo risultato?",
+    "opzioni": [
+     "Nessun bound $GC\\le c\\,\\chi(G)$, $c$ costante, vale per ogni lista",
+     "$GC$ è ottima sui grafi bipartiti, con ogni lista",
+     "Anche $DSATUR$ usa $k$ colori sul grafo $G_k$",
+     "Il bound $\\Delta(G)+1$ non vale sui grafi bipartiti"
+    ],
+    "spiegazione": "Il rapporto $GC/\\chi=\\frac k2$ cresce con $k$: nessuna costante lo limita. Il bound $\\Delta+1=k$ vale ed è raggiunto; $DSATUR$ colora i grafi bipartiti con $2$ colori."
+   },
+   "en": {
+    "testo": "On the crown graph $G_k$ ($n=2k$ vertices, $\\chi(G_k)=2$) the greedy coloring, with a suitable list, uses $k=\\frac n2$ colors. What does this result show?",
+    "opzioni": [
+     "No bound $GC\\le c\\,\\chi(G)$, $c$ constant, holds for every list",
+     "$GC$ is optimal on bipartite graphs, with every list",
+     "$DSATUR$ also uses $k$ colors on the graph $G_k$",
+     "The bound $\\Delta(G)+1$ fails on bipartite graphs"
+    ],
+    "spiegazione": "The ratio $GC/\\chi=\\frac k2$ grows with $k$: no constant bounds it. The bound $\\Delta+1=k$ holds and is attained; $DSATUR$ colors bipartite graphs with $2$ colors."
+   }
+  },
+  {
+   "id": "eh-f-384",
+   "livello": "ipotesi",
+   "capitolo": "constructive-heuristics",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/constructive-heuristics/scheduling-su-macchine-parallele-prima-i-lavori-piu-lunghi/#box-10-prop-graham69",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/constructive-heuristics/scheduling-on-parallel-machines-longest-jobs-first/#box-10-prop-graham69"
+   },
+   "corretta": 3,
+   "it": {
+    "testo": "La garanzia $LPT(I)\\le(\\frac43-\\frac1{3m})z(I)$ è migliore di quella di $LIST$. Quale caratteristica di $LPT$ usa la dimostrazione?",
+    "opzioni": [
+     "Le macchine hanno velocità diverse",
+     "Le macchine sono almeno $3$",
+     "I tempi dei lavori sono tutti distinti",
+     "I lavori sono ordinati per tempo non crescente"
+    ],
+    "spiegazione": "$LPT$ è $LIST$ con i lavori ordinati per tempo non crescente: l'ultimo lavoro assegnato è il più corto, e da qui viene il fattore migliore. Le macchine sono identiche e $m$ è qualsiasi."
+   },
+   "en": {
+    "testo": "The guarantee $LPT(I)\\le(\\frac43-\\frac1{3m})z(I)$ is better than that of $LIST$. Which feature of $LPT$ does the proof use?",
+    "opzioni": [
+     "The machines have different speeds",
+     "There are at least $3$ machines",
+     "The processing times are all distinct",
+     "The jobs are sorted by non-increasing time"
+    ],
+    "spiegazione": "$LPT$ is $LIST$ with the jobs sorted by non-increasing time: the last assigned job is the shortest, and the better factor comes from this. The machines are identical and $m$ is arbitrary."
+   }
+  },
+  {
+   "id": "eh-f-385",
+   "livello": "ipotesi",
+   "capitolo": "constructive-heuristics",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/constructive-heuristics/colorazione-dei-vertici-greedy-e-dsatur/#box-18-prop-GCDelta",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/constructive-heuristics/vertex-coloring-greedy-and-dsatur/#box-18-prop-GCDelta"
+   },
+   "corretta": 2,
+   "it": {
+    "testo": "Perché il bound $GC(I)\\le\\Delta(G)+1$ vale per ogni lista $\\lambda$ dei vertici?",
+    "opzioni": [
+     "Il grafo da colorare è sempre bipartito",
+     "$GC$ ricolora i vertici già colorati quando serve",
+     "Al più $\\Delta(G)$ vicini di un vertice hanno già un colore",
+     "$GC$ colora sempre i vertici per grado decrescente"
+    ],
+    "spiegazione": "Il vertice prende il più piccolo colore non usato dai vicini già colorati, che sono al più $\\Delta(G)$: uno fra i colori $1,\\dots,\\Delta(G)+1$ è libero. Non servono ordini o proprietà del grafo."
+   },
+   "en": {
+    "testo": "Why does the bound $GC(I)\\le\\Delta(G)+1$ hold for every list $\\lambda$ of the vertices?",
+    "opzioni": [
+     "The graph to be colored is always bipartite",
+     "$GC$ recolors the colored vertices when needed",
+     "At most $\\Delta(G)$ neighbours of a vertex already have a color",
+     "$GC$ always colors the vertices by decreasing degree"
+    ],
+    "spiegazione": "The vertex takes the smallest color not used by its colored neighbours, which are at most $\\Delta(G)$: one of the colors $1,\\dots,\\Delta(G)+1$ is free. No order or graph property is needed."
+   }
+  },
+  {
+   "id": "eh-f-386",
+   "livello": "ipotesi",
+   "capitolo": "constructive-heuristics",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/constructive-heuristics/il-problema-dello-zaino-0-1-quale-ordinamento/#sez-sec-KP",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/constructive-heuristics/the-0-1-knapsack-problem-which-order/#sez-sec-KP"
+   },
+   "corretta": 1,
+   "it": {
+    "testo": "Per quale problema l'algoritmo greedy per efficienza $p_j/w_j$ non crescente dà sempre una soluzione ottima?",
+    "opzioni": [
+     "Lo zaino limitato, con più copie per oggetto",
+     "Lo zaino continuo, con oggetti frazionabili",
+     "Lo zaino 0/1 con profitti e pesi interi",
+     "Lo zaino 0/1 con capacità $c\\ge\\frac12\\sum_jw_j$"
+    ],
+    "spiegazione": "Il greedy per efficienza risolve il rilassamento continuo (Dantzig), dove l'oggetto critico entra in parte. Sullo zaino 0/1 e sulle sue varianti intere non garantisce l'ottimo."
+   },
+   "en": {
+    "testo": "For which problem does the greedy algorithm by non-increasing efficiency $p_j/w_j$ always give an optimal solution?",
+    "opzioni": [
+     "The bounded knapsack, with several copies per item",
+     "The continuous knapsack, with divisible items",
+     "The 0/1 knapsack with integer profits and weights",
+     "The 0/1 knapsack with capacity $c\\ge\\frac12\\sum_jw_j$"
+    ],
+    "spiegazione": "The greedy by efficiency solves the continuous relaxation (Dantzig), where the split item enters in part. On the 0/1 knapsack and its integer variants it does not guarantee the optimum."
+   }
+  },
+  {
+   "id": "eh-f-387",
+   "livello": "ipotesi",
+   "capitolo": "constructive-heuristics",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/constructive-heuristics/i-problemi-e-le-ipotesi/#box-2-def-greedy",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/constructive-heuristics/the-problems-and-the-assumptions/#box-2-def-greedy"
+   },
+   "corretta": 0,
+   "it": {
+    "testo": "Quale ingrediente serve a un algoritmo greedy costruttivo?",
+    "opzioni": [
+     "Una regola di scelta dell'elemento, mai rivista",
+     "Una soluzione ammissibile completa di partenza",
+     "Un intorno delle soluzioni ammissibili",
+     "Un bound duale del valore ottimo"
+    ],
+    "spiegazione": "Il greedy parte dalla soluzione vuota e aggiunge un elemento alla volta scelto con una regola, senza tornare indietro. La soluzione di partenza e l'intorno servono alla ricerca locale."
+   },
+   "en": {
+    "testo": "Which ingredient does a greedy constructive algorithm need?",
+    "opzioni": [
+     "A selection rule for each step, never revised",
+     "A complete feasible starting solution",
+     "A neighbourhood of the feasible solutions",
+     "A dual bound on the optimal value"
+    ],
+    "spiegazione": "The greedy starts from the empty solution and adds one element at a time chosen by a rule, never going back. A starting solution and a neighbourhood are what local search needs."
+   }
+  },
+  {
+   "id": "eh-f-388",
+   "livello": "ipotesi",
+   "capitolo": "constructive-heuristics",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/constructive-heuristics/il-problema-del-commesso-viaggiatore-accodare-o-inserire/#sez-sec-NN",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/constructive-heuristics/the-travelling-salesman-problem-append-or-insert/#sez-sec-NN"
+   },
+   "corretta": 3,
+   "it": {
+    "testo": "Nearest neighbour dà sempre un giro ammissibile su un grafo completo. Perché può fallire su un grafo non completo?",
+    "opzioni": [
+     "Sui grafi non completi le distanze sono asimmetriche",
+     "Serve la disuguaglianza triangolare",
+     "Il numero di città deve essere pari",
+     "L'ultima città può non avere un lato verso la partenza"
+    ],
+    "spiegazione": "Su un grafo completo ogni città non visitata è raggiungibile e il giro si chiude sempre. Su un grafo non completo il cammino può bloccarsi o non chiudersi verso la città di partenza."
+   },
+   "en": {
+    "testo": "Nearest neighbour always gives a feasible tour on a complete graph. Why can it fail on a graph that is not complete?",
+    "opzioni": [
+     "On incomplete graphs distances are asymmetric",
+     "It needs the triangle inequality",
+     "The number of cities must be even",
+     "The last city may have no edge back to the start"
+    ],
+    "spiegazione": "On a complete graph every unvisited city can be reached and the tour always closes. On an incomplete graph the path may get stuck or fail to close at the starting city."
+   }
+  },
+  {
+   "id": "eh-f-389",
+   "livello": "teorema",
+   "capitolo": "local-search",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/local-search/valutare-una-mossa-in-modo-incrementale/#box-4-prop-twoopt",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/local-search/evaluating-a-move-incrementally/#box-4-prop-twoopt"
+   },
+   "corretta": 3,
+   "it": {
+    "testo": "Un giro del TSP simmetrico lungo $40$; una mossa 2-opt toglie i lati $\\{u_1,v_1\\}$ e $\\{u_2,v_2\\}$, con $d_{u_1v_1}=7$ e $d_{u_2v_2}=9$, e aggiunge $\\{u_1,u_2\\}$ e $\\{v_1,v_2\\}$, con $d_{u_1u_2}=4$ e $d_{v_1v_2}=5$. Quanto è lungo il giro nuovo?",
+    "opzioni": [
+     "$47$",
+     "$25$",
+     "$40$",
+     "$33$"
+    ],
+    "spiegazione": "$\\Delta=d_{u_1u_2}+d_{v_1v_2}-d_{u_1v_1}-d_{u_2v_2}=4+5-7-9=-7$, quindi $40-7=33$. Il tratto fra $v_1$ e $u_2$ si percorre al contrario ma, con distanze simmetriche, ha la stessa lunghezza."
+   },
+   "en": {
+    "testo": "A tour of the symmetric TSP of length $40$; a 2-opt move removes the edges $\\{u_1,v_1\\}$ and $\\{u_2,v_2\\}$, with $d_{u_1v_1}=7$ and $d_{u_2v_2}=9$, and adds $\\{u_1,u_2\\}$ and $\\{v_1,v_2\\}$, with $d_{u_1u_2}=4$ and $d_{v_1v_2}=5$. How long is the new tour?",
+    "opzioni": [
+     "$47$",
+     "$25$",
+     "$40$",
+     "$33$"
+    ],
+    "spiegazione": "$\\Delta=d_{u_1u_2}+d_{v_1v_2}-d_{u_1v_1}-d_{u_2v_2}=4+5-7-9=-7$, hence $40-7=33$. The stretch between $v_1$ and $u_2$ is travelled backwards but, with symmetric distances, it has the same length."
+   }
+  },
+  {
+   "id": "eh-f-390",
+   "livello": "teorema",
+   "capitolo": "local-search",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/local-search/paesaggi-piatti-e-obiettivi-ausiliari/#box-9-prop-transfer",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/local-search/flat-landscapes-and-auxiliary-objectives/#box-9-prop-transfer"
+   },
+   "corretta": 2,
+   "it": {
+    "testo": "Due carichi $L_a=10$ e $L_b=6$; si sposta la quantità $\\delta=3$ da $a$ a $b$. Come cambia la somma dei quadrati dei carichi?",
+    "opzioni": [
+     "Diminuisce di $24$",
+     "Non cambia",
+     "Diminuisce di $6$",
+     "Aumenta di $6$"
+    ],
+    "spiegazione": "La variazione è $2\\delta(L_b-L_a+\\delta)=2\\cdot3\\cdot(6-10+3)=-6$: infatti $7^2+9^2=130$ e $10^2+6^2=136$. La somma dei carichi non cambia, quella dei quadrati sì."
+   },
+   "en": {
+    "testo": "Two loads $L_a=10$ and $L_b=6$; the amount $\\delta=3$ is transferred from $a$ to $b$. How does the sum of the squared loads change?",
+    "opzioni": [
+     "It decreases by $24$",
+     "It does not change",
+     "It decreases by $6$",
+     "It increases by $6$"
+    ],
+    "spiegazione": "The change is $2\\delta(L_b-L_a+\\delta)=2\\cdot3\\cdot(6-10+3)=-6$: indeed $7^2+9^2=130$ and $10^2+6^2=136$. The sum of the loads does not change, that of the squares does."
+   }
+  },
+  {
+   "id": "eh-f-391",
+   "livello": "teorema",
+   "capitolo": "local-search",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/local-search/ricerca-locale-lo-schema/#box-2-prop-termination",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/local-search/local-search-the-scheme/#box-2-prop-termination"
+   },
+   "corretta": 1,
+   "it": {
+    "testo": "Ricerca locale per lo zaino 0/1 (problema di massimo, profitti interi) che si sposta solo su vicini strettamente migliori: parte da una soluzione di profitto $9$ e il valore ottimo è $17$. Quante mosse fa al più?",
+    "opzioni": [
+     "$2^n$",
+     "$8$",
+     "$17$",
+     "Esattamente $8$"
+    ],
+    "spiegazione": "Ogni mossa aumenta il profitto di almeno $1$ e il profitto non supera $z(I)=17$: al più $z(I)-f(x^0)=8$ mosse. Può farne meno, fermandosi in un ottimo locale non globale."
+   },
+   "en": {
+    "testo": "Local search for the 0/1 knapsack (maximization, integer profits) that moves only to strictly better neighbours: it starts from a solution of profit $9$ and the optimal value is $17$. At most how many moves does it make?",
+    "opzioni": [
+     "$2^n$",
+     "$8$",
+     "$17$",
+     "Exactly $8$"
+    ],
+    "spiegazione": "Every move increases the profit by at least $1$ and the profit cannot exceed $z(I)=17$: at most $z(I)-f(x^0)=8$ moves. It may make fewer, stopping at a local optimum that is not global."
+   }
+  },
+  {
+   "id": "eh-f-392",
+   "livello": "teorema",
+   "capitolo": "local-search",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/local-search/variable-neighbourhood-descent/#sez-sec-vnd",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/local-search/variable-neighbourhood-descent/#sez-sec-vnd"
+   },
+   "corretta": 0,
+   "it": {
+    "testo": "La variable neighbourhood descent usa gli intorni $N_1,\\dots,N_k$: torna a $N_1$ dopo ogni miglioramento e passa all'intorno successivo quando quello corrente non migliora. Dove si ferma?",
+    "opzioni": [
+     "In un ottimo locale per tutti i $k$ intorni",
+     "In un ottimo locale per il solo intorno $N_k$",
+     "In una soluzione ottima dell'istanza",
+     "Dopo esattamente $k$ mosse"
+    ],
+    "spiegazione": "Si ferma quando nessuno dei $k$ intorni contiene un vicino migliore: è un ottimo locale per ciascuno. Non è per forza ottimo globale, e il numero di mosse non è fissato."
+   },
+   "en": {
+    "testo": "Variable neighbourhood descent uses the neighbourhoods $N_1,\\dots,N_k$: it goes back to $N_1$ after every improvement and moves to the next neighbourhood when the current one does not improve. Where does it stop?",
+    "opzioni": [
+     "At a local optimum for all the $k$ neighbourhoods",
+     "At a local optimum for the neighbourhood $N_k$ only",
+     "At an optimal solution of the instance",
+     "After exactly $k$ moves"
+    ],
+    "spiegazione": "It stops when none of the $k$ neighbourhoods contains a better neighbour: it is a local optimum for each of them. It is not necessarily a global optimum, and the number of moves is not fixed."
+   }
+  },
+  {
+   "id": "eh-f-393",
+   "livello": "ipotesi",
+   "capitolo": "local-search",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/local-search/ricerca-locale-lo-schema/#box-2-prop-termination",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/local-search/local-search-the-scheme/#box-2-prop-termination"
+   },
+   "corretta": 3,
+   "it": {
+    "testo": "Perché una ricerca locale che si sposta solo su vicini strettamente migliori termina per ogni soluzione di partenza, anche senza obiettivo intero?",
+    "opzioni": [
+     "L'intorno usato dalla ricerca è esatto",
+     "La regola di scelta è first improvement",
+     "La funzione obiettivo è convessa",
+     "Le soluzioni sono finite e $f$ migliora sempre"
+    ],
+    "spiegazione": "Una soluzione non si visita due volte (il valore migliora strettamente) e le soluzioni sono finite. L'obiettivo intero serve solo al bound $f(x^0)-z(I)$ sul numero di mosse."
+   },
+   "en": {
+    "testo": "Why does a local search that moves only to strictly better neighbours terminate from every starting solution, even without an integer objective?",
+    "opzioni": [
+     "The neighbourhood of the search is exact",
+     "The choice rule is first improvement",
+     "The objective function is convex",
+     "The solutions are finite and $f$ always improves"
+    ],
+    "spiegazione": "No solution is visited twice (the value improves strictly) and the solutions are finitely many. The integer objective is needed only for the bound $f(x^0)-z(I)$ on the number of moves."
+   }
+  },
+  {
+   "id": "eh-f-394",
+   "livello": "ipotesi",
+   "capitolo": "local-search",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/local-search/ricerca-locale-multi-start/#sez-sec-multistart",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/local-search/multi-start-local-search/#sez-sec-multistart"
+   },
+   "corretta": 2,
+   "it": {
+    "testo": "La ricerca locale multi-start ripete la ricerca da più soluzioni di partenza. Perché le partenze devono essere diverse (per esempio casuali)?",
+    "opzioni": [
+     "L'intorno cambia con la soluzione di partenza",
+     "Partenze diverse servono a calcolare il gap",
+     "Dalla stessa partenza si arriva allo stesso ottimo",
+     "Altrimenti la ricerca locale non termina"
+    ],
+    "spiegazione": "Con una regola di scelta deterministica la ricerca locale da una partenza fissata arriva sempre allo stesso ottimo locale: ripeterla non serve. Partenze diverse esplorano valli diverse."
+   },
+   "en": {
+    "testo": "Multi-start local search repeats the search from several starting solutions. Why must the starts be different (for instance random)?",
+    "opzioni": [
+     "The neighbourhood changes with the starting solution",
+     "Different starts are needed to compute the gap",
+     "The same start leads to the same local optimum",
+     "Otherwise the local search does not terminate"
+    ],
+    "spiegazione": "With a deterministic choice rule the local search from a fixed start always reaches the same local optimum: repeating it is useless. Different starts explore different valleys."
+   }
+  },
+  {
+   "id": "eh-f-395",
+   "livello": "ipotesi",
+   "capitolo": "local-search",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/local-search/paesaggi-piatti-e-obiettivi-ausiliari/#sez-sec-flat",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/local-search/flat-landscapes-and-auxiliary-objectives/#sez-sec-flat"
+   },
+   "corretta": 1,
+   "it": {
+    "testo": "Perché la ricerca locale per il bin packing ha bisogno di un obiettivo ausiliario come $\\sum_bL_b^2$?",
+    "opzioni": [
+     "$\\sum_bL_b^2$ è uguale al numero di contenitori usati",
+     "Quasi ogni mossa lascia invariato il numero di contenitori",
+     "Il numero di contenitori non è un valore intero",
+     "Le mosse rendono spesso le soluzioni non ammissibili"
+    ],
+    "spiegazione": "Il paesaggio del numero di contenitori è piatto: quasi ogni vicino ha lo stesso valore e la ricerca si ferma subito. $\\sum_bL_b^2$ premia i contenitori pieni e guida verso lo svuotamento di uno."
+   },
+   "en": {
+    "testo": "Why does local search for bin packing need an auxiliary objective such as $\\sum_bL_b^2$?",
+    "opzioni": [
+     "$\\sum_bL_b^2$ equals the number of bins used",
+     "Almost every move leaves the number of bins unchanged",
+     "The number of bins is not an integer value",
+     "The moves often make the solutions infeasible"
+    ],
+    "spiegazione": "The landscape of the number of bins is flat: almost every neighbour has the same value and the search stops at once. $\\sum_bL_b^2$ rewards full bins and guides towards emptying one."
+   }
+  },
+  {
+   "id": "eh-f-396",
+   "livello": "ipotesi",
+   "capitolo": "local-search",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/local-search/p-cmax-move-e-swap/#sez-sec-pcmax",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/local-search/p-cmax-move-and-swap/#sez-sec-pcmax"
+   },
+   "corretta": 0,
+   "it": {
+    "testo": "Per $P\\,||\\,C_{\\max}$ si usa l'intorno swap (scambio di due lavori su macchine diverse) oltre a move. In quale situazione serve?",
+    "opzioni": [
+     "Se ogni move sovraccarica la macchina che riceve",
+     "Se le macchine sono più numerose dei lavori",
+     "Se tutti i lavori hanno lo stesso tempo di esecuzione",
+     "Se il makespan è già uguale al bound inferiore"
+    ],
+    "spiegazione": "Una soluzione può essere un ottimo locale per move (ogni spostamento crea un carico più alto) ma non per swap, che sposta lavori in tutte e due le direzioni: è il caso della soluzione di $LPT$."
+   },
+   "en": {
+    "testo": "For $P\\,||\\,C_{\\max}$ the swap neighbourhood (exchange of two jobs on different machines) is used besides move. In which situation is it needed?",
+    "opzioni": [
+     "When every move overloads the receiving machine",
+     "When there are more machines than jobs to assign",
+     "When all the jobs have the same processing time",
+     "When the makespan already equals the lower bound"
+    ],
+    "spiegazione": "A solution can be a local optimum for move (every transfer creates a higher load) but not for swap, which moves jobs in both directions: this is the case of the $LPT$ solution."
+   }
+  },
+  {
+   "id": "eh-f-397",
+   "livello": "teorema",
+   "capitolo": "metaheuristics",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/metaheuristics/come-uscire-da-un-ottimo-locale/#sez-sec-sa",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/metaheuristics/how-to-escape-from-a-local-optimum/#sez-sec-sa"
+   },
+   "corretta": 1,
+   "it": {
+    "testo": "Simulated annealing per un problema di minimo, alla temperatura $T=5$: un vicino peggiore di $\\delta=10$. Con quale probabilità lo accetta la regola di Metropolis?",
+    "opzioni": [
+     "$e^{-10}\\approx 0{,}00005$",
+     "$e^{-2}\\approx 0{,}14$",
+     "$e^{-0{,}5}\\approx 0{,}61$",
+     "$1-e^{-2}\\approx 0{,}86$"
+    ],
+    "spiegazione": "Per $\\delta>0$ la probabilità è $e^{-\\delta/T}=e^{-10/5}=e^{-2}\\approx0{,}14$. I vicini non peggiori ($\\delta\\le0$) si accettano con probabilità $1$."
+   },
+   "en": {
+    "testo": "Simulated annealing for a minimization problem, at temperature $T=5$: a neighbour worse by $\\delta=10$. With which probability does the Metropolis rule accept it?",
+    "opzioni": [
+     "$e^{-10}\\approx 0.00005$",
+     "$e^{-2}\\approx 0.14$",
+     "$e^{-0.5}\\approx 0.61$",
+     "$1-e^{-2}\\approx 0.86$"
+    ],
+    "spiegazione": "For $\\delta>0$ the probability is $e^{-\\delta/T}=e^{-10/5}=e^{-2}\\approx0.14$. Neighbours that are not worse ($\\delta\\le0$) are accepted with probability $1$."
+   }
+  },
+  {
+   "id": "eh-f-398",
+   "livello": "teorema",
+   "capitolo": "metaheuristics",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/metaheuristics/come-uscire-da-un-ottimo-locale/#sez-sec-sa-param",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/metaheuristics/how-to-escape-from-a-local-optimum/#sez-sec-sa-param"
+   },
+   "corretta": 0,
+   "it": {
+    "testo": "Raffreddamento geometrico $T\\leftarrow\\alpha T$ con $T_0=100$ e $\\alpha=0{,}9$. Quanto vale la temperatura dopo tre raffreddamenti?",
+    "opzioni": [
+     "$72{,}9$",
+     "$70$",
+     "$81$",
+     "$27{,}1$"
+    ],
+    "spiegazione": "$T=100\\cdot0{,}9^3=72{,}9$. $70$ toglie $10$ ogni volta (raffreddamento lineare), $81$ è il valore dopo due passi."
+   },
+   "en": {
+    "testo": "Geometric cooling $T\\leftarrow\\alpha T$ with $T_0=100$ and $\\alpha=0.9$. What is the temperature after three coolings?",
+    "opzioni": [
+     "$72.9$",
+     "$70$",
+     "$81$",
+     "$27.1$"
+    ],
+    "spiegazione": "$T=100\\cdot0.9^3=72.9$. $70$ subtracts $10$ each time (linear cooling), $81$ is the value after two steps."
+   }
+  },
+  {
+   "id": "eh-f-399",
+   "livello": "teorema",
+   "capitolo": "metaheuristics",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/metaheuristics/tabu-search/#sez-sec-ts",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/metaheuristics/tabu-search/#sez-sec-ts"
+   },
+   "corretta": 3,
+   "it": {
+    "testo": "Nella tabu search una mossa è tabu, ma porta a una soluzione migliore della migliore trovata finora. Che cosa fa l'algoritmo?",
+    "opzioni": [
+     "Non la esegue finché resta tabu",
+     "Riparte da una soluzione casuale",
+     "Raddoppia la tenure",
+     "Può eseguirla: criterio di aspirazione"
+    ],
+    "spiegazione": "Il criterio di aspirazione ammette una mossa tabu che porta a una soluzione migliore della migliore trovata: quella soluzione non è certo già stata visitata."
+   },
+   "en": {
+    "testo": "In tabu search a move is tabu, but it leads to a solution better than the best one found so far. What does the algorithm do?",
+    "opzioni": [
+     "It does not make it while it is tabu",
+     "It restarts from a random solution",
+     "It doubles the tenure",
+     "It may make it: aspiration criterion"
+    ],
+    "spiegazione": "The aspiration criterion allows a tabu move that leads to a solution better than the best one found: that solution has certainly not been visited yet."
+   }
+  },
+  {
+   "id": "eh-f-400",
+   "livello": "ipotesi",
+   "capitolo": "metaheuristics",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/metaheuristics/come-uscire-da-un-ottimo-locale/#sez-sec-sa-param",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/metaheuristics/how-to-escape-from-a-local-optimum/#sez-sec-sa-param"
+   },
+   "corretta": 2,
+   "it": {
+    "testo": "Quale scelta dei parametri rende il simulated annealing simile a una passeggiata casuale fra le soluzioni?",
+    "opzioni": [
+     "Una temperatura minima alta",
+     "Una sola mossa per temperatura",
+     "Una temperatura molto alta",
+     "Un fattore $\\alpha$ vicino a $0$"
+    ],
+    "spiegazione": "Con $T$ molto alta $e^{-\\delta/T}\\approx1$: quasi ogni vicino peggiore è accettato. Con $\\alpha$ vicino a $0$ la temperatura crolla subito e l'algoritmo si comporta come una discesa."
+   },
+   "en": {
+    "testo": "Which choice of the parameters makes simulated annealing similar to a random walk among the solutions?",
+    "opzioni": [
+     "A high minimum temperature",
+     "A single move per temperature",
+     "A very high temperature",
+     "A factor $\\alpha$ close to $0$"
+    ],
+    "spiegazione": "With a very high $T$, $e^{-\\delta/T}\\approx1$: almost every worse neighbour is accepted. With $\\alpha$ close to $0$ the temperature collapses at once and the algorithm behaves like a descent."
+   }
+  },
+  {
+   "id": "eh-f-401",
+   "livello": "ipotesi",
+   "capitolo": "metaheuristics",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/metaheuristics/tabu-search/#sez-sec-ts",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/metaheuristics/tabu-search/#sez-sec-ts"
+   },
+   "corretta": 1,
+   "it": {
+    "testo": "Che cosa succede nella tabu search se la tenure è troppo lunga?",
+    "opzioni": [
+     "Il criterio di aspirazione smette di agire",
+     "Si vietano troppe mosse, perdendo buone soluzioni",
+     "La ricerca torna a ciclare fra poche soluzioni",
+     "Si comporta come un simulated annealing"
+    ],
+    "spiegazione": "Una lista tabu lunga vieta troppo (sulle istanze del capitolo, con tenure grande si perde l'ottimo); è la tenure troppo corta che lascia ciclare la ricerca."
+   },
+   "en": {
+    "testo": "What happens in tabu search if the tenure is too long?",
+    "opzioni": [
+     "The aspiration criterion stops acting",
+     "Too many moves are forbidden, missing good solutions",
+     "The search goes back to cycling among few solutions",
+     "It behaves like a simulated annealing"
+    ],
+    "spiegazione": "A long tabu list forbids too much (on the instances of the chapter, with a large tenure the optimum is lost); it is a tenure that is too short that lets the search cycle."
+   }
+  },
+  {
+   "id": "eh-f-402",
+   "livello": "ipotesi",
+   "capitolo": "metaheuristics",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/metaheuristics/iterated-local-search/#sez-sec-ils",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/metaheuristics/iterated-local-search/#sez-sec-ils"
+   },
+   "corretta": 0,
+   "it": {
+    "testo": "Nell'iterated local search la perturbazione è troppo debole. Che cosa succede?",
+    "opzioni": [
+     "La ricerca locale la annulla: stesso ottimo locale",
+     "Diventa un riavvio da una soluzione casuale",
+     "L'algoritmo non termina più",
+     "Il criterio di accettazione rifiuta ogni ottimo"
+    ],
+    "spiegazione": "Una perturbazione debole resta nella stessa valle: la ricerca locale riporta allo stesso ottimo locale. Una perturbazione troppo forte, al contrario, è un riavvio casuale."
+   },
+   "en": {
+    "testo": "In iterated local search the perturbation is too weak. What happens?",
+    "opzioni": [
+     "The local search undoes it: same local optimum",
+     "It becomes a restart from a random solution",
+     "The algorithm no longer terminates",
+     "The acceptance criterion rejects every optimum"
+    ],
+    "spiegazione": "A weak perturbation stays in the same valley: the local search brings it back to the same local optimum. A perturbation that is too strong, on the contrary, is a random restart."
+   }
+  },
+  {
+   "id": "eh-f-403",
+   "livello": "ipotesi",
+   "capitolo": "metaheuristics",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/metaheuristics/grasp/#sez-sec-grasp",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/metaheuristics/grasp/#sez-sec-grasp"
+   },
+   "corretta": 3,
+   "it": {
+    "testo": "GRASP con una lista ristretta dei candidati (RCL) di un solo elemento: a che cosa si riduce?",
+    "opzioni": [
+     "A una ricerca locale da partenze casuali",
+     "Al simulated annealing con temperatura $T=0$",
+     "A una large neighbourhood search sul greedy",
+     "Allo stesso greedy migliorato a ogni iterazione"
+    ],
+    "spiegazione": "Con una RCL di un elemento la costruzione sceglie sempre il migliore: è il greedy deterministico, e ogni iterazione ripete la stessa soluzione e lo stesso ottimo locale."
+   },
+   "en": {
+    "testo": "GRASP with a restricted candidate list (RCL) of a single element: what does it reduce to?",
+    "opzioni": [
+     "A local search from random starting solutions",
+     "Simulated annealing with temperature $T=0$",
+     "A large neighbourhood search on the greedy",
+     "The same improved greedy solution every iteration"
+    ],
+    "spiegazione": "With an RCL of one element the construction always picks the best one: it is the deterministic greedy, and every iteration repeats the same solution and the same local optimum."
+   }
+  },
+  {
+   "id": "eh-f-404",
+   "livello": "ipotesi",
+   "capitolo": "metaheuristics",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/metaheuristics/large-neighbourhood-search/#sez-sec-lns",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/metaheuristics/large-neighbourhood-search/#sez-sec-lns"
+   },
+   "corretta": 2,
+   "it": {
+    "testo": "Nella large neighbourhood search la distruzione toglie $q$ elementi e la riparazione li reinserisce. Che cosa regola $q$?",
+    "opzioni": [
+     "La temperatura iniziale e il raffreddamento",
+     "La grandezza della popolazione di soluzioni",
+     "La grandezza dell'intorno e il costo della riparazione",
+     "La tenure della lista tabu delle mosse"
+    ],
+    "spiegazione": "Più elementi si tolgono, più soluzioni si possono raggiungere con una riparazione, ma la riparazione costa di più."
+   },
+   "en": {
+    "testo": "In large neighbourhood search the destroy step removes $q$ elements and the repair step reinserts them. What does $q$ control?",
+    "opzioni": [
+     "The initial temperature and the cooling",
+     "The size of the population of solutions",
+     "The neighbourhood size and the repair cost",
+     "The tenure of the tabu list of the moves"
+    ],
+    "spiegazione": "The more elements are removed, the more solutions can be reached by one repair, but the repair costs more."
+   }
+  },
+  {
+   "id": "eh-f-405",
+   "livello": "ipotesi",
+   "capitolo": "metaheuristics",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/metaheuristics/metodi-basati-su-popolazioni-algoritmi-genetici-e-memetici/#sez-sec-ga",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/metaheuristics/population-based-methods-genetic-and-memetic-algorithms/#sez-sec-ga"
+   },
+   "corretta": 1,
+   "it": {
+    "testo": "Perché l'algoritmo genetico per lo zaino 0/1 ha bisogno di un passo di riparazione?",
+    "opzioni": [
+     "La mutazione diminuisce sempre il profitto",
+     "Incrocio e mutazione possono superare la capacità",
+     "La popolazione potrebbe svuotarsi",
+     "I profitti cambiano a ogni generazione"
+    ],
+    "spiegazione": "Il figlio di due soluzioni ammissibili, e una mutazione che porta un bit a $1$, possono violare il vincolo di capacità: la riparazione toglie oggetti finché il vettore torna ammissibile."
+   },
+   "en": {
+    "testo": "Why does the genetic algorithm for the 0/1 knapsack need a repair step?",
+    "opzioni": [
+     "Mutation always decreases the profit",
+     "Crossover and mutation can exceed the capacity",
+     "The population could become empty",
+     "The profits change at every generation"
+    ],
+    "spiegazione": "The child of two feasible solutions, and a mutation that sets a bit to $1$, can violate the capacity constraint: the repair removes items until the vector is feasible again."
+   }
+  },
+  {
+   "id": "eh-f-406",
+   "livello": "teorema",
+   "capitolo": "mip-heuristics-classical",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/mip-heuristics-classical/#sez-sec-submip",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/mip-heuristics-classical/#sez-sec-submip"
+   },
+   "corretta": 2,
+   "it": {
+    "testo": "Local branching per $P\\,||\\,C_{\\max}$ (variabili binarie $x_{jh}$) aggiunge il vincolo $\\Delta(\\vet x,\\bar{\\vet x})\\le 2$, con $\\bar{\\vet x}$ l'incumbent. Quali assegnamenti restano ammissibili per il sotto-MIP?",
+    "opzioni": [
+     "Solo l'incumbent $\\bar{\\vet x}$",
+     "Quelli che scambiano due lavori",
+     "Quelli che spostano al più un lavoro",
+     "Quelli che spostano al più due lavori"
+    ],
+    "spiegazione": "Per due assegnamenti $\\Delta=2r$, con $r$ il numero di lavori su macchine diverse: $\\Delta\\le2$ vuol dire $r\\le1$, cioè l'intorno move. Uno scambio sposta due lavori ($\\Delta=4$)."
+   },
+   "en": {
+    "testo": "Local branching for $P\\,||\\,C_{\\max}$ (binary variables $x_{jh}$) adds the constraint $\\Delta(\\vet x,\\bar{\\vet x})\\le 2$, with $\\bar{\\vet x}$ the incumbent. Which assignments remain feasible for the sub-MIP?",
+    "opzioni": [
+     "Only the incumbent $\\bar{\\vet x}$",
+     "Those that swap two jobs",
+     "Those that move at most one job",
+     "Those that move at most two jobs"
+    ],
+    "spiegazione": "For two assignments $\\Delta=2r$, with $r$ the number of jobs on different machines: $\\Delta\\le2$ means $r\\le1$, that is, the move neighbourhood. A swap moves two jobs ($\\Delta=4$)."
+   }
+  },
+  {
+   "id": "eh-f-407",
+   "livello": "teorema",
+   "capitolo": "mip-heuristics-classical",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/mip-heuristics-classical/#sez-sec-rf",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/mip-heuristics-classical/#sez-sec-rf"
+   },
+   "corretta": 1,
+   "it": {
+    "testo": "Relax-and-fix risolve una sequenza di MIP: le variabili del blocco corrente sono intere, quelle dei blocchi precedenti fissate, quelle dei successivi rilassate. Quale affermazione vale?",
+    "opzioni": [
+     "Ha bisogno di una soluzione ammissibile di partenza",
+     "Può finire senza soluzione: non rivede le fissazioni",
+     "Trova sempre una soluzione ottima del MIP",
+     "Risolve solo problemi di programmazione lineare"
+    ],
+    "spiegazione": "Le variabili fissate nei primi blocchi non cambiano più: una scelta sbagliata può rendere non ammissibili i blocchi successivi (o dare una soluzione non ottima). Parte dal rilassamento, non da un incumbent."
+   },
+   "en": {
+    "testo": "Relax-and-fix solves a sequence of MIPs: the variables of the current block are integer, those of the previous blocks fixed, those of the next blocks relaxed. Which statement holds?",
+    "opzioni": [
+     "It needs a feasible starting solution",
+     "It can end without a solution: fixings are not revised",
+     "It always finds an optimal solution of the MIP",
+     "It solves only linear programming problems"
+    ],
+    "spiegazione": "The variables fixed in the first blocks never change again: a wrong choice can make the next blocks infeasible (or give a non-optimal solution). It starts from the relaxation, not from an incumbent."
+   }
+  },
+  {
+   "id": "eh-f-408",
+   "livello": "teorema",
+   "capitolo": "mip-heuristics-classical",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/mip-heuristics-classical/#sez-sec-fp",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/mip-heuristics-classical/#sez-sec-fp"
+   },
+   "corretta": 0,
+   "it": {
+    "testo": "La feasibility pump alterna un arrotondamento e un problema lineare che minimizza la distanza $\\Delta(\\vet x,\\bar{\\vet x})$ dal punto arrotondato $\\bar{\\vet x}$. Quando si ferma con successo?",
+    "opzioni": [
+     "Quando la soluzione del problema lineare è intera",
+     "Quando la distanza aumenta fra due iterazioni",
+     "Subito dopo il primo arrotondamento",
+     "Quando il problema lineare non è ammissibile"
+    ],
+    "spiegazione": "Distanza nulla vuol dire che il punto ammissibile per il rilassamento coincide con un punto intero: è una soluzione ammissibile del MIP. Il metodo cerca l'ammissibilità, non l'ottimo."
+   },
+   "en": {
+    "testo": "The feasibility pump alternates a rounding and a linear program that minimizes the distance $\\Delta(\\vet x,\\bar{\\vet x})$ from the rounded point $\\bar{\\vet x}$. When does it stop with success?",
+    "opzioni": [
+     "When the solution of the linear program is integer",
+     "When the distance increases between two iterations",
+     "Right after the first rounding",
+     "When the linear program is infeasible"
+    ],
+    "spiegazione": "Zero distance means that the point feasible for the relaxation coincides with an integer point: it is a feasible solution of the MIP. The method looks for feasibility, not for the optimum."
+   }
+  },
+  {
+   "id": "eh-f-409",
+   "livello": "teorema",
+   "capitolo": "mip-heuristics-classical",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/mip-heuristics-classical/#sez-sec-diving",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/mip-heuristics-classical/#sez-sec-diving"
+   },
+   "corretta": 3,
+   "it": {
+    "testo": "Il diving fissa a ogni passo una variabile frazionaria e risolve di nuovo il rilassamento lineare. Quale esito è possibile?",
+    "opzioni": [
+     "Trova sempre una soluzione ammissibile",
+     "Dimostra l'ottimalità della soluzione",
+     "Non fissa mai una variabile a $0$",
+     "Il rilassamento diventa non ammissibile"
+    ],
+    "spiegazione": "Il diving è un tuffo in un solo ramo dell'albero, senza tornare indietro: una sequenza di fissazioni può svuotare la regione ammissibile. Non dà un bound per dimostrare l'ottimo."
+   },
+   "en": {
+    "testo": "Diving fixes a fractional variable at every step and solves the linear relaxation again. Which outcome is possible?",
+    "opzioni": [
+     "It always finds a feasible solution",
+     "It proves the optimality of the solution",
+     "It never fixes a variable to $0$",
+     "The relaxation becomes infeasible"
+    ],
+    "spiegazione": "Diving is a dive into a single branch of the tree, without going back: a sequence of fixings can empty the feasible region. It gives no bound to prove optimality."
+   }
+  },
+  {
+   "id": "eh-f-410",
+   "livello": "teorema",
+   "capitolo": "mip-heuristics-classical",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/mip-heuristics-classical/#sez-sec-give",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/mip-heuristics-classical/#sez-sec-give"
+   },
+   "corretta": 2,
+   "it": {
+    "testo": "Problema di minimo con obiettivo intero: un'euristica MIP si ferma con l'incumbent di valore $18$ e il rilassamento lineare vale $17$. Che cosa si conclude?",
+    "opzioni": [
+     "Il valore ottimo è $17$",
+     "Il gap è nullo: $18$ è ottimo",
+     "Il valore ottimo è $17$ o $18$",
+     "Il valore ottimo è $18$"
+    ],
+    "spiegazione": "$17\\le z(I)\\le18$ e $z(I)$ è intero: resta il dubbio fra i due valori. Il gap è $\\frac{18-17}{17}\\approx5{,}9\\%$; per chiuderlo serve un bound migliore o la prova dell'ottimo."
+   },
+   "en": {
+    "testo": "Minimization problem with integer objective: a MIP heuristic stops with an incumbent of value $18$ and the linear relaxation is $17$. What can be concluded?",
+    "opzioni": [
+     "The optimal value is $17$",
+     "The gap is zero: $18$ is optimal",
+     "The optimal value is $17$ or $18$",
+     "The optimal value is $18$"
+    ],
+    "spiegazione": "$17\\le z(I)\\le18$ and $z(I)$ is an integer: the doubt between the two values remains. The gap is $\\frac{18-17}{17}\\approx5.9\\%$; closing it requires a better bound or a proof of optimality."
+   }
+  },
+  {
+   "id": "eh-f-411",
+   "livello": "ipotesi",
+   "capitolo": "mip-heuristics-classical",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/mip-heuristics-classical/#sez-sec-rounding",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/mip-heuristics-classical/#sez-sec-rounding"
+   },
+   "corretta": 1,
+   "it": {
+    "testo": "Arrotondare per difetto una soluzione del rilassamento lineare dà una soluzione ammissibile per lo zaino 0/1. Per quale modello invece non lo garantisce?",
+    "opzioni": [
+     "Lo zaino 0/1 con capacità grande",
+     "Il bin packing, con $\\sum_bx_{jb}=1$ per ogni oggetto",
+     "Lo zaino 0/1 con dati interi",
+     "Ogni modello con vincoli $\\le$ a coefficienti non negativi"
+    ],
+    "spiegazione": "Con vincoli $\\le$, coefficienti e termini noti non negativi, diminuire le variabili non viola nulla. Nel bin packing un oggetto frazionato in due contenitori, arrotondato per difetto, non è più assegnato."
+   },
+   "en": {
+    "testo": "Rounding down a solution of the linear relaxation gives a feasible solution for the 0/1 knapsack. For which model is this not guaranteed?",
+    "opzioni": [
+     "The 0/1 knapsack with a large capacity",
+     "Bin packing, with $\\sum_bx_{jb}=1$ for every item",
+     "The 0/1 knapsack with integer data",
+     "Any model with $\\le$ constraints and non-negative coefficients"
+    ],
+    "spiegazione": "With $\\le$ constraints, non-negative coefficients and right-hand sides, decreasing the variables violates nothing. In bin packing an item split between two bins, rounded down, is no longer assigned."
+   }
+  },
+  {
+   "id": "eh-f-412",
+   "livello": "ipotesi",
+   "capitolo": "mip-heuristics-classical",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/mip-heuristics-classical/#sez-sec-submip",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/mip-heuristics-classical/#sez-sec-submip"
+   },
+   "corretta": 0,
+   "it": {
+    "testo": "RINS fissa le variabili che hanno lo stesso valore nell'incumbent $\\bar{\\vet x}$ e nella soluzione $\\tilde{\\vet x}$ del rilassamento, e risolve il sotto-MIP sulle altre. Che cosa le serve?",
+    "opzioni": [
+     "Un incumbent e una soluzione del rilassamento",
+     "Solo la soluzione del rilassamento",
+     "Un bound duale uguale all'incumbent",
+     "Una soluzione del rilassamento intera"
+    ],
+    "spiegazione": "Il confronto fra $\\bar{\\vet x}$ e $\\tilde{\\vet x}$ richiede tutte e due; se $\\tilde{\\vet x}$ fosse intera il problema sarebbe già risolto, e un bound uguale all'incumbent lo dimostrerebbe ottimo."
+   },
+   "en": {
+    "testo": "RINS fixes the variables that have the same value in the incumbent $\\bar{\\vet x}$ and in the solution $\\tilde{\\vet x}$ of the relaxation, and solves the sub-MIP on the others. What does it need?",
+    "opzioni": [
+     "An incumbent and a solution of the relaxation",
+     "Only the solution of the relaxation",
+     "A dual bound equal to the incumbent",
+     "An integer solution of the relaxation"
+    ],
+    "spiegazione": "Comparing $\\bar{\\vet x}$ and $\\tilde{\\vet x}$ requires both; if $\\tilde{\\vet x}$ were integer the problem would already be solved, and a bound equal to the incumbent would prove it optimal."
+   }
+  },
+  {
+   "id": "eh-f-413",
+   "livello": "ipotesi",
+   "capitolo": "mip-heuristics-classical",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/mip-heuristics-classical/#box-1-def-mipheur",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/mip-heuristics-classical/#box-1-def-mipheur"
+   },
+   "corretta": 3,
+   "it": {
+    "testo": "Che cosa usa, per definizione, un'euristica basata sulla PLI (matheuristic)?",
+    "opzioni": [
+     "Un intorno definito sulle permutazioni",
+     "Una popolazione di soluzioni da incrociare",
+     "Solo regole costruttive di tipo greedy",
+     "Il rilassamento lineare del modello e un solver MIP"
+    ],
+    "spiegazione": "Un'euristica MIP lavora sul modello del problema, attraverso il suo rilassamento lineare e un solver MIP; le euristiche costruttive, la ricerca locale e le metaeuristiche lavorano su una rappresentazione delle soluzioni."
+   },
+   "en": {
+    "testo": "What does a MIP-based heuristic (matheuristic) use, by definition?",
+    "opzioni": [
+     "A neighbourhood defined on permutations",
+     "A population of solutions to recombine",
+     "Only constructive rules of greedy type",
+     "The linear relaxation of the model and a MIP solver"
+    ],
+    "spiegazione": "A MIP heuristic works on the model of the problem, through its linear relaxation and a MIP solver; constructive heuristics, local search and metaheuristics work on a representation of the solutions."
+   }
+  },
+  {
+   "id": "eh-f-414",
+   "livello": "ipotesi",
+   "capitolo": "mip-heuristics-classical",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/mip-heuristics-classical/#sez-sec-submip",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/mip-heuristics-classical/#sez-sec-submip"
+   },
+   "corretta": 2,
+   "it": {
+    "testo": "Local branching con il vincolo $\\Delta(\\vet x,\\bar{\\vet x})\\le k$ esplora le soluzioni vicine all'incumbent. Che cosa succede se $k$ è troppo piccolo?",
+    "opzioni": [
+     "La soluzione trovata non è ammissibile",
+     "Serve un rilassamento più forte",
+     "Il sotto-MIP può non contenere soluzioni migliori",
+     "Il sotto-MIP diventa grande come il MIP"
+    ],
+    "spiegazione": "Con $k$ piccolo il sotto-MIP è facile ma l'intorno è piccolo: può contenere solo soluzioni non migliori dell'incumbent. Con $k$ grande si avvicina al MIP intero, che è difficile."
+   },
+   "en": {
+    "testo": "Local branching with the constraint $\\Delta(\\vet x,\\bar{\\vet x})\\le k$ explores the solutions close to the incumbent. What happens if $k$ is too small?",
+    "opzioni": [
+     "The solution found is not feasible",
+     "A stronger relaxation is needed",
+     "The sub-MIP may contain no better solution",
+     "The sub-MIP becomes as large as the MIP"
+    ],
+    "spiegazione": "With a small $k$ the sub-MIP is easy but the neighbourhood is small: it may contain only solutions not better than the incumbent. With a large $k$ it approaches the whole MIP, which is hard."
+   }
+  },
+  {
+   "id": "eh-f-415",
+   "livello": "ipotesi",
+   "capitolo": "mip-heuristics-classical",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/mip-heuristics-classical/#sez-sec-gurobi",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/mip-heuristics-classical/#sez-sec-gurobi"
+   },
+   "corretta": 1,
+   "it": {
+    "testo": "Una soluzione euristica passata al solver come MIP start a che cosa serve nel branch-and-bound?",
+    "opzioni": [
+     "Riduce il numero delle variabili",
+     "Dà subito un incumbent per potare i nodi",
+     "Dà un bound duale migliore",
+     "Rafforza il rilassamento lineare"
+    ],
+    "spiegazione": "Il MIP start è un bound primale: i nodi con bound del rilassamento non migliore dell'incumbent si potano. Il bound duale viene dai rilassamenti, non dalle soluzioni ammissibili."
+   },
+   "en": {
+    "testo": "What is a heuristic solution passed to the solver as a MIP start used for in branch-and-bound?",
+    "opzioni": [
+     "It reduces the number of variables",
+     "It gives an incumbent at once to prune nodes",
+     "It gives a better dual bound",
+     "It strengthens the linear relaxation"
+    ],
+    "spiegazione": "The MIP start is a primal bound: the nodes whose relaxation bound is not better than the incumbent are pruned. The dual bound comes from the relaxations, not from feasible solutions."
+   }
+  },
+  {
+   "id": "eh-f-416",
+   "livello": "ipotesi",
+   "capitolo": "heuristics",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/heuristics/#box-12-def-exact",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/heuristics/#box-12-def-exact"
+   },
+   "corretta": 2,
+   "it": {
+    "testo": "Per un problema con un numero finito di soluzioni ammissibili, quale intorno è esatto qualunque sia l'istanza?",
+    "opzioni": [
+     "L'intorno 2-opt del TSP",
+     "L'intorno move di $P\\,||\\,C_{\\max}$",
+     "Quello con ogni soluzione vicina delle altre",
+     "L'intorno flip del problema dello zaino 0/1"
+    ],
+    "spiegazione": "Con $N(S)=\\mathscr{F}(I)$ un ottimo locale non ha soluzioni migliori: è globale. Flip, 2-opt e move hanno ottimi locali non globali (esempi del capitolo e della ricerca locale)."
+   },
+   "en": {
+    "testo": "For a problem with finitely many feasible solutions, which neighbourhood is exact whatever the instance?",
+    "opzioni": [
+     "The 2-opt neighbourhood of the TSP",
+     "The move neighbourhood of $P\\,||\\,C_{\\max}$",
+     "The one where every solution neighbours all others",
+     "The flip neighbourhood of the 0/1 knapsack"
+    ],
+    "spiegazione": "With $N(S)=\\mathscr{F}(I)$ a local optimum has no better solution: it is global. Flip, 2-opt and move have local optima that are not global (examples of this chapter and of local search)."
+   }
+  },
+  {
+   "id": "eh-f-417",
+   "livello": "teorema",
+   "capitolo": "heuristics",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/heuristics/#box-7-ex-gaps",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/heuristics/#box-7-ex-gaps"
+   },
+   "corretta": 1,
+   "it": {
+    "testo": "TSP: un giro lungo $25$, un bound duale $\\mathrm{LB}(I)=17$ e il valore ottimo $z(I)=18$. Quanto valgono il gap e l'errore relativo $\\frac{\\mathscr{A}(I)-z(I)}{z(I)}$?",
+    "opzioni": [
+     "Gap ed errore $\\approx47{,}1\\%$",
+     "Gap $\\approx47{,}1\\%$, errore $\\approx38{,}9\\%$",
+     "Gap $\\approx32\\%$, errore $\\approx28\\%$",
+     "Gap $\\approx38{,}9\\%$, errore $\\approx47{,}1\\%$"
+    ],
+    "spiegazione": "$gap=\\frac{25-17}{17}\\approx47{,}1\\%$ ed errore $=\\frac{25-18}{18}\\approx38{,}9\\%$: l'errore è al più il gap. $32\\%$ e $28\\%$ dividono per $25$, il valore maggiore."
+   },
+   "en": {
+    "testo": "TSP: a tour of length $25$, a dual bound $\\mathrm{LB}(I)=17$ and the optimal value $z(I)=18$. What are the gap and the relative error $\\frac{\\mathscr{A}(I)-z(I)}{z(I)}$?",
+    "opzioni": [
+     "Gap and error both $\\approx47.1\\%$",
+     "Gap $\\approx47.1\\%$, error $\\approx38.9\\%$",
+     "Gap $\\approx32\\%$, error $\\approx28\\%$",
+     "Gap $\\approx38.9\\%$, error $\\approx47.1\\%$"
+    ],
+    "spiegazione": "$gap=\\frac{25-17}{17}\\approx47.1\\%$ and error $=\\frac{25-18}{18}\\approx38.9\\%$: the error is at most the gap. $32\\%$ and $28\\%$ divide by $25$, the larger value."
+   }
+  },
+  {
+   "id": "eh-f-418",
+   "livello": "ipotesi",
+   "capitolo": "constructive-heuristics",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/constructive-heuristics/il-problema-del-bin-packing-prima-ordinare-poi-riempire/#sez-sec-FFD",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/constructive-heuristics/the-bin-packing-problem-first-sort-then-pack/#sez-sec-FFD"
+   },
+   "corretta": 1,
+   "it": {
+    "testo": "First Fit Decreasing ordina gli oggetti per peso prima di riempire i contenitori. In quale situazione si può usare solo First Fit nell'ordine di arrivo?",
+    "opzioni": [
+     "Quando l'istanza ha molti oggetti",
+     "Quando gli oggetti arrivano uno alla volta (online)",
+     "Quando gli oggetti hanno tutti lo stesso peso",
+     "Quando i contenitori hanno capacità diverse"
+    ],
+    "spiegazione": "L'ordinamento richiede di conoscere tutta l'istanza in anticipo. Con pesi uguali l'ordine non conta, e capacità diverse o istanze grandi non impediscono di ordinare."
+   },
+   "en": {
+    "testo": "First Fit Decreasing sorts the items by weight before filling the bins. In which situation can only First Fit in the arrival order be used?",
+    "opzioni": [
+     "When the instance has many items",
+     "When the items arrive one at a time (online)",
+     "When all the items have the same weight",
+     "When the bins have different capacities"
+    ],
+    "spiegazione": "Sorting requires knowing the whole instance in advance. With equal weights the order does not matter, and different capacities or large instances do not prevent sorting."
+   }
+  },
+  {
+   "id": "eh-f-419",
+   "livello": "ipotesi",
+   "capitolo": "metaheuristics",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/metaheuristics/i-problemi-e-le-ipotesi/#sez-sec-random",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/metaheuristics/the-problems-and-the-assumptions/#sez-sec-random"
+   },
+   "corretta": 3,
+   "it": {
+    "testo": "Perché gli esperimenti del capitolo sulle metaeuristiche usano un generatore di numeri casuali con un seme fissato?",
+    "opzioni": [
+     "Perché le metaeuristiche diventino esatte",
+     "Perché senza seme l'algoritmo non termina",
+     "Perché garantisce di raggiungere l'ottimo",
+     "Perché ogni corsa sia riproducibile"
+    ],
+    "spiegazione": "Con lo stesso seme si ottengono gli stessi numeri e quindi la stessa corsa, nelle note, nel codice e nell'app. Il seme non cambia la natura euristica del metodo."
+   },
+   "en": {
+    "testo": "Why do the experiments of the chapter on metaheuristics use a random number generator with a fixed seed?",
+    "opzioni": [
+     "So that the metaheuristics become exact",
+     "Because without a seed the algorithm never stops",
+     "Because it guarantees reaching the optimum",
+     "So that every run is reproducible"
+    ],
+    "spiegazione": "The same seed gives the same numbers and hence the same run, in the notes, in the code and in the app. The seed does not change the heuristic nature of the method."
+   }
+  },
+  {
+   "id": "eh-f-420",
+   "livello": "ipotesi",
+   "capitolo": "metaheuristics",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/metaheuristics/variable-neighbourhood-search/#sez-sec-vns",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/metaheuristics/variable-neighbourhood-search/#sez-sec-vns"
+   },
+   "corretta": 2,
+   "it": {
+    "testo": "Nella variable neighbourhood search lo shaking prende una soluzione casuale in $N_k$, e $k$ cresce dopo ogni insuccesso. Perché?",
+    "opzioni": [
+     "Perché $N_k$ è più piccolo per $k$ più grande",
+     "Per ridurre il tempo di calcolo di ogni iterazione",
+     "Per diversificare: soluzioni più lontane escono dalla valle",
+     "Per intensificare la ricerca attorno all'incumbent"
+    ],
+    "spiegazione": "Se la ricerca locale riporta allo stesso ottimo, una perturbazione più forte serve a cambiare valle; dopo un miglioramento si torna a $k=1$ per intensificare."
+   },
+   "en": {
+    "testo": "In variable neighbourhood search the shaking takes a random solution in $N_k$, and $k$ grows after every failure. Why?",
+    "opzioni": [
+     "Because $N_k$ is smaller for larger $k$",
+     "To reduce the computing time of each iteration",
+     "To diversify: farther solutions leave the valley",
+     "To intensify the search around the incumbent"
+    ],
+    "spiegazione": "If the local search brings back the same optimum, a stronger perturbation is needed to change valley; after an improvement the search goes back to $k=1$ to intensify."
+   }
+  },
+  {
+   "id": "eh-f-421",
+   "livello": "teorema",
+   "capitolo": "metaheuristics",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/metaheuristics/come-uscire-da-un-ottimo-locale/#sez-sec-sa",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/metaheuristics/how-to-escape-from-a-local-optimum/#sez-sec-sa"
+   },
+   "corretta": 1,
+   "it": {
+    "testo": "Simulated annealing alla temperatura $T=2$: due vicini peggiori, con $\\delta_1=2$ e $\\delta_2=6$. Quante volte è più probabile accettare il primo?",
+    "opzioni": [
+     "$e^{-2}\\approx0{,}14$ volte",
+     "$e^{2}\\approx7{,}4$ volte",
+     "$3$ volte",
+     "$e^{4}\\approx54{,}6$ volte"
+    ],
+    "spiegazione": "Il rapporto è $\\frac{e^{-2/2}}{e^{-6/2}}=e^{-1+3}=e^2\\approx7{,}4$. Non è il rapporto dei peggioramenti ($3$): la probabilità decresce in modo esponenziale con $\\delta/T$."
+   },
+   "en": {
+    "testo": "Simulated annealing at temperature $T=2$: two worse neighbours, with $\\delta_1=2$ and $\\delta_2=6$. How many times more likely is accepting the first one?",
+    "opzioni": [
+     "$e^{-2}\\approx0.14$ times",
+     "$e^{2}\\approx7.4$ times",
+     "$3$ times",
+     "$e^{4}\\approx54.6$ times"
+    ],
+    "spiegazione": "The ratio is $\\frac{e^{-2/2}}{e^{-6/2}}=e^{-1+3}=e^2\\approx7.4$. It is not the ratio of the worsenings ($3$): the probability decreases exponentially with $\\delta/T$."
+   }
+  },
+  {
+   "id": "eh-f-422",
+   "livello": "teorema",
+   "capitolo": "mip-heuristics-classical",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/mip-heuristics-classical/#sez-sec-fp",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/mip-heuristics-classical/#sez-sec-fp"
+   },
+   "corretta": 2,
+   "it": {
+    "testo": "Per variabili binarie la distanza $\\Delta(\\vet x,\\bar{\\vet x})=\\sum_j|x_j-\\bar x_j|$ da un punto $\\bar{\\vet x}\\in\\{0,1\\}^n$ si scrive in modo lineare come:",
+    "opzioni": [
+     "$\\sum_jx_j\\bar x_j+\\sum_j(1-x_j)(1-\\bar x_j)$",
+     "$\\sum_{j:\\bar x_j=1}x_j+\\sum_{j:\\bar x_j=0}(1-x_j)$",
+     "$\\sum_{j:\\bar x_j=0}x_j+\\sum_{j:\\bar x_j=1}(1-x_j)$",
+     "$\\sum_{j:\\bar x_j=1}(x_j-1)+\\sum_{j:\\bar x_j=0}x_j$"
+    ],
+    "spiegazione": "Se $\\bar x_j=0$ allora $|x_j-0|=x_j$, se $\\bar x_j=1$ allora $|x_j-1|=1-x_j$ (con $0\\le x_j\\le1$); la somma dei prodotti conta invece gli accordi, $n-\\Delta$. È la forma usata dalla feasibility pump, dal local branching e dalla proximity search."
+   },
+   "en": {
+    "testo": "For binary variables the distance $\\Delta(\\vet x,\\bar{\\vet x})=\\sum_j|x_j-\\bar x_j|$ from a point $\\bar{\\vet x}\\in\\{0,1\\}^n$ can be written linearly as:",
+    "opzioni": [
+     "$\\sum_jx_j\\bar x_j+\\sum_j(1-x_j)(1-\\bar x_j)$",
+     "$\\sum_{j:\\bar x_j=1}x_j+\\sum_{j:\\bar x_j=0}(1-x_j)$",
+     "$\\sum_{j:\\bar x_j=0}x_j+\\sum_{j:\\bar x_j=1}(1-x_j)$",
+     "$\\sum_{j:\\bar x_j=1}(x_j-1)+\\sum_{j:\\bar x_j=0}x_j$"
+    ],
+    "spiegazione": "If $\\bar x_j=0$ then $|x_j-0|=x_j$, if $\\bar x_j=1$ then $|x_j-1|=1-x_j$ (with $0\\le x_j\\le1$); the sum of products counts the agreements instead, $n-\\Delta$. It is the form used by the feasibility pump, local branching and proximity search."
+   }
+  },
+  {
+   "id": "eh-f-423",
+   "livello": "ipotesi",
+   "capitolo": "mip-heuristics-classical",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/mip-heuristics-classical/#sez-sec-submip",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/mip-heuristics-classical/#sez-sec-submip"
+   },
+   "corretta": 1,
+   "it": {
+    "testo": "La proximity search sostituisce l'obiettivo con la distanza $\\Delta(\\vet x,\\bar{\\vet x})$ e aggiunge $f(\\vet x)\\le f(\\bar{\\vet x})-\\theta$. Perché le serve un incumbent?",
+    "opzioni": [
+     "Serve a ottenere un bound duale del problema",
+     "Il vincolo e la distanza usano $\\bar{\\vet x}$",
+     "Serve a risolvere il rilassamento lineare",
+     "Serve a fissare variabili come in RINS"
+    ],
+    "spiegazione": "Sia il nuovo obiettivo sia il vincolo di miglioramento dipendono dall'incumbent $\\bar{\\vet x}$: senza una soluzione ammissibile il metodo non parte. Non fissa variabili e non dà bound duali."
+   },
+   "en": {
+    "testo": "Proximity search replaces the objective with the distance $\\Delta(\\vet x,\\bar{\\vet x})$ and adds $f(\\vet x)\\le f(\\bar{\\vet x})-\\theta$. Why does it need an incumbent?",
+    "opzioni": [
+     "It is needed to obtain a dual bound of the problem",
+     "The constraint and the distance use $\\bar{\\vet x}$",
+     "It is needed to solve the linear relaxation",
+     "It is needed to fix variables as in RINS"
+    ],
+    "spiegazione": "Both the new objective and the improvement constraint depend on the incumbent $\\bar{\\vet x}$: without a feasible solution the method cannot start. It fixes no variables and gives no dual bound."
+   }
+  },
+  {
+   "id": "eh-f-424",
+   "livello": "ipotesi",
+   "capitolo": "mip-heuristics-classical",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/mip-heuristics-classical/#sez-sec-rf",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/mip-heuristics-classical/#sez-sec-rf"
+   },
+   "corretta": 0,
+   "it": {
+    "testo": "Fix-and-optimize migliora una soluzione riottimizzando un blocco di variabili alla volta, con le altre fissate. Che cosa le serve che a relax-and-fix non serve?",
+    "opzioni": [
+     "Una soluzione ammissibile di partenza",
+     "Il rilassamento lineare del modello intero",
+     "Un solver MIP per risolvere i sotto-problemi",
+     "Una funzione obiettivo a valori tutti interi"
+    ],
+    "spiegazione": "Fix-and-optimize fissa le variabili fuori dal blocco ai valori di una soluzione ammissibile, che quindi deve esistere; relax-and-fix parte dal rilassamento e costruisce la soluzione blocco per blocco."
+   },
+   "en": {
+    "testo": "Fix-and-optimize improves a solution by re-optimizing one block of variables at a time, with the others fixed. What does it need that relax-and-fix does not?",
+    "opzioni": [
+     "A feasible starting solution",
+     "The linear relaxation of the model",
+     "A MIP solver for the subproblems",
+     "An integer-valued objective function"
+    ],
+    "spiegazione": "Fix-and-optimize fixes the variables outside the block at the values of a feasible solution, which must therefore exist; relax-and-fix starts from the relaxation and builds the solution block by block."
+   }
+  },
+  {
+   "id": "eh-f-425",
+   "livello": "ipotesi",
+   "capitolo": "mip-heuristics-classical",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/mip-heuristics-classical/#sez-sec-rounding",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/mip-heuristics-classical/#sez-sec-rounding"
+   },
+   "corretta": 3,
+   "it": {
+    "testo": "Per lo zaino 0/1 arrotondare per difetto la soluzione del rilassamento dà una soluzione ammissibile. Perché l'arrotondamento all'intero più vicino $\\lfloor x_j+\\frac12\\rfloor$ non lo garantisce?",
+    "opzioni": [
+     "La soluzione del rilassamento può essere intera",
+     "I profitti possono non essere interi",
+     "Cambia il segno della funzione obiettivo",
+     "Arrotondare per eccesso può superare la capacità"
+    ],
+    "spiegazione": "Una variabile con $x_j\\ge\\frac12$ va a $1$ e il peso totale può superare $c$. Arrotondare per difetto solo diminuisce il peso, quindi resta ammissibile."
+   },
+   "en": {
+    "testo": "For the 0/1 knapsack, rounding down the solution of the relaxation gives a feasible solution. Why does rounding to the nearest integer $\\lfloor x_j+\\frac12\\rfloor$ not guarantee it?",
+    "opzioni": [
+     "The solution of the relaxation may be integer",
+     "The profits may not be integers",
+     "It changes the sign of the objective function",
+     "Rounding up can exceed the capacity"
+    ],
+    "spiegazione": "A variable with $x_j\\ge\\frac12$ goes to $1$ and the total weight may exceed $c$. Rounding down only decreases the weight, so it stays feasible."
+   }
+  },
+  {
+   "id": "eh-f-426",
+   "livello": "ipotesi",
+   "capitolo": "mip-heuristics-classical",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/mip-heuristics-classical/#sez-sec-gurobi",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/mip-heuristics-classical/#sez-sec-gurobi"
+   },
+   "corretta": 2,
+   "it": {
+    "testo": "L'esperimento con i parametri delle euristiche di Gurobi usa un limite sul lavoro (work limit) invece che sul tempo. Perché?",
+    "opzioni": [
+     "Con il limite sul lavoro si trova l'ottimo",
+     "Il limite sul lavoro spegne le euristiche",
+     "Il lavoro è deterministico: corse riproducibili",
+     "Il limite sul tempo non esiste in gurobipy"
+    ],
+    "spiegazione": "Il tempo dipende dal calcolatore e dal carico, il lavoro misurato dal solver no: con un solo thread le corse si ripetono uguali. Il limite non cambia che cosa fanno le euristiche."
+   },
+   "en": {
+    "testo": "The experiment with the parameters of Gurobi's heuristics uses a work limit instead of a time limit. Why?",
+    "opzioni": [
+     "With a work limit the optimum is found",
+     "The work limit switches the heuristics off",
+     "Work is deterministic: runs are reproducible",
+     "There is no time limit in gurobipy"
+    ],
+    "spiegazione": "Time depends on the computer and its load, the work measured by the solver does not: with a single thread the runs repeat identically. The limit does not change what the heuristics do."
+   }
   }
  ]
 }
