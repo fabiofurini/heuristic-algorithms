@@ -16,7 +16,7 @@ title: "MIP heuristics for the classical problems"
 
     - From the module <em>Combinatorial Optimization Problems</em>, the formulations of the classical problems: the models of the [0/1 knapsack problem](https://fabiofurini.github.io/combinatorial-optimization/formulations/knapsack-formulations/), of the [bin packing problem](https://fabiofurini.github.io/combinatorial-optimization/formulations/bin-packing-formulations/), of the [travelling salesman problem](https://fabiofurini.github.io/combinatorial-optimization/formulations/tsp-formulations/), of [$P\,||\,C_{\max}$](https://fabiofurini.github.io/combinatorial-optimization/formulations/pcmax-formulations/) and of [lot sizing](https://fabiofurini.github.io/combinatorial-optimization/formulations/lot-sizing-formulations/).
 
-    - From this module, the chapters on heuristic algorithms, from «Heuristic algorithms: definitions» to «Metaheuristics»: the constructive heuristics ($GR$, $FF$, $NN$, $LPT$), local search and metaheuristics, whose solutions are the starting points of this chapter.
+    - From this module, the chapters on heuristic algorithms, from [«Heuristic algorithms: definitions»](heuristics.md) to [«Metaheuristics»](metaheuristics/index.md) ([«Constructive heuristics»](constructive-heuristics/index.md), [«Local search»](local-search/index.md)): the constructive heuristics ($GR$, $FF$, $NN$, $LPT$), local search and metaheuristics, whose solutions are the starting points of this chapter.
 
 !!! chiave "Objectives"
 

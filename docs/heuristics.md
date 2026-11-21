@@ -14,7 +14,7 @@ title: "Heuristic algorithms: definitions"
 
     - From the module <em>Combinatorial Optimization Problems</em>, the [0/1 knapsack problem](https://fabiofurini.github.io/combinatorial-optimization/combinatorial-optimization-problems/knapsack/the-0-1-knapsack-problem/), the [bin packing problem](https://fabiofurini.github.io/combinatorial-optimization/combinatorial-optimization-problems/bin-packing/the-bin-packing-problem/), the [travelling salesman problem](https://fabiofurini.github.io/combinatorial-optimization/combinatorial-optimization-problems/tsp/the-travelling-salesman-problem/) and [$P\,||\,C_{\max}$](https://fabiofurini.github.io/combinatorial-optimization/combinatorial-optimization-problems/pcmax/scheduling-on-identical-parallel-machines/): instances, feasible solutions and optimal values of the four problems used as examples.
 
-    - From the module <em>Integer linear programming</em>, [Chapter 2 «LP relaxation»](https://fabiofurini.github.io/integer-linear-programming/models-and-bounds/lp-relaxation/): the LP relaxation as a source of dual bounds. A short recap is given here for the 0/1 knapsack problem.
+    - From the module <em>Integer linear programming</em>, [Chapter 2 «Primal and dual bounds»](https://fabiofurini.github.io/integer-linear-programming/models-and-bounds/lp-relaxation/): the LP relaxation as a source of dual bounds. A short recap is given here for the 0/1 knapsack problem.
 
 !!! chiave "Objectives"
 

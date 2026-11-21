@@ -26,6 +26,8 @@ title: "Constructive heuristics"
 
     - build a TSP tour by nearest neighbour and by the insertion heuristics;
 
+    - color a graph with the greedy coloring and with $DSATUR$;
+
     - apply randomized construction, regret insertion and the pilot method;
 
     - compare the results with the dual bounds, and explain when a constructive heuristic fails.
