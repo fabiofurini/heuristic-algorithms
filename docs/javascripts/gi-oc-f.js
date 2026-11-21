@@ -12,7 +12,7 @@
   "use strict";
   const GI = window.GI, M = window.GI_MIP, O = window.GI_OC;
   const T = GI.T;
-  const { PASSO, parPasso, vaiA, clamp, nuovoId, osservaDimensioni, nuovaVoce, dim, pix, disegno, daIndirizzo, chiedi, menuIstanze, mostraCursore, parkMiller } = O;
+  const { PASSO, parPasso, vaiA, clamp, nuovoId, osservaDimensioni, nuovaVoce, dim, pix, disegno, daIndirizzo, chiedi, menuIstanze, mostraCursore, parkMiller, vetrina, scegliVoce } = O;
   window.GI_RICETTE = window.GI_RICETTE || {};
 
   // =================================================================
@@ -322,6 +322,12 @@
       istanzaDaIndirizzo(st, META_ES, carica);
       osservaDimensioni(board, st);
       daIndirizzo(st);
+      // home della collana: data-vetrina="istanza | voce" (numero dell'istanza nel menu, da 1; voce sa o ts), ultima iterazione
+      vetrina(st, (v) => {
+        const [i, voce] = v.split("|").map((x) => x.trim());
+        scegliVoce(st, voce);
+        if (META_ES[+i - 1]) carica(META_ES[+i - 1], +i - 1);
+      });
     },
     aggiorna(board, st) {
       const S = metaStato(st), C = M.COL(st), [W, H] = dim(board), { I, R, K, k, E, alg, n } = S;
@@ -399,8 +405,8 @@
         const nT = R.it.length / pr.L;
         if (k === 0) nota = T(`Si parte dal giro del nearest neighbour ${seq(R.start)}, lungo \\(${R.f0}\\). Parametri: \\(T_0 = ${GI.num(pr.T0, 3)}\\), \\(\\alpha = ${GI.num(pr.alpha, 3)}\\), \\(L = ${pr.L}\\), \\(T_{\\min} = ${GI.num(pr.Tmin, 3)}\\): ${nT} temperature, ${R.it.length} iterazioni. Le \\(M = ${R.M}\\) mosse 2-opt sono numerate in ordine lessicografico; a ogni iterazione \\(u = \\textsc{Rand}()\\) sceglie la mossa \\(1 + \\lfloor ${R.M}\\,u \\rfloor\\) e \\(v = \\textsc{Rand}()\\) serve al test di Metropolis.`,
           `Start from the nearest neighbour tour ${seq(R.start)}, of length \\(${R.f0}\\). Parameters: \\(T_0 = ${GI.num(pr.T0, 3)}\\), \\(\\alpha = ${GI.num(pr.alpha, 3)}\\), \\(L = ${pr.L}\\), \\(T_{\\min} = ${GI.num(pr.Tmin, 3)}\\): ${nT} temperatures, ${R.it.length} iterations. The \\(M = ${R.M}\\) 2-opt moves are numbered in lexicographic order; at each iteration \\(u = \\textsc{Rand}()\\) chooses the move \\(1 + \\lfloor ${R.M}\\,u \\rfloor\\) and \\(v = \\textsc{Rand}()\\) is used in the Metropolis test.`);
-        else if (k === K) nota = T(`Temperatura sotto \\(T_{\\min}\\): fine. Il miglior giro visitato, ${seq(R.best)}, è lungo ${M.tinta(C.blu, R.fb)}${R.fb === z ? ": è ottimo" : `, ${GI.num(100 * (R.fb - z) / z, 1)}\\,\\% sopra \\(z(I) = ${z}\\)`}.`,
-          `Temperature below \\(T_{\\min}\\): stop. The best tour visited, ${seq(R.best)}, has length ${M.tinta(C.blu, R.fb)}${R.fb === z ? ": it is optimal" : `, ${GI.num(100 * (R.fb - z) / z, 1)}\\,\\% above \\(z(I) = ${z}\\)`}.`);
+        else if (k === K) nota = T(`Temperatura sotto \\(T_{\\min}\\): fine. Il miglior giro visitato, ${seq(R.best)}, è lungo ${M.tinta(C.blu, R.fb)}${R.fb === z ? ": è ottimo" : `, \\(${GI.num(100 * (R.fb - z) / z, 1)}\\,\\%\\) sopra \\(z(I) = ${z}\\)`}.`,
+          `Temperature below \\(T_{\\min}\\): stop. The best tour visited, ${seq(R.best)}, has length ${M.tinta(C.blu, R.fb)}${R.fb === z ? ": it is optimal" : `, \\(${GI.num(100 * (R.fb - z) / z, 1)}\\,\\%\\) above \\(z(I) = ${z}\\)`}.`);
         else {
           const peggiora = E.de > 0;
           const esito = !peggiora ? T(`\\(\\delta \\le 0\\): ${M.tinta(C.viola, "accettata")} senza test (il numero \\(v = ${fx(E.v, 4)}\\) è estratto lo stesso).`, `\\(\\delta \\le 0\\): ${M.tinta(C.viola, "accepted")} without the test (the number \\(v = ${fx(E.v, 4)}\\) is drawn anyway).`)
@@ -428,8 +434,8 @@
       // tabu search
       if (k === 0) nota = T(`Si parte dal giro del nearest neighbour ${seq(R.start)}, lungo \\(${R.f0}\\). A ogni iterazione si valutano tutte le mosse 2-opt e si esegue la migliore ammissibile, anche se peggiora; i due archi tolti restano tabu per \\(${R.tenure}\\) iterazioni (non si possono rimettere), salvo che la mossa dia un giro migliore del migliore (aspirazione). Al più ${R.maxIt} iterazioni.`,
         `Start from the nearest neighbour tour ${seq(R.start)}, of length \\(${R.f0}\\). At each iteration all the 2-opt moves are evaluated and the best admissible one is performed, even if it is worse; the two removed edges stay tabu for \\(${R.tenure}\\) iterations (they may not be added back), unless the move gives a tour better than the best one (aspiration). At most ${R.maxIt} iterations.`);
-      else if (k === K) nota = T(`Fine. Il miglior giro visitato, ${seq(R.best)}, è lungo ${M.tinta(C.blu, R.fb)}${R.fb === z ? ": è ottimo" : `, ${GI.num(100 * (R.fb - z) / z, 1)}\\,\\% sopra \\(z(I) = ${z}\\)`}.`,
-        `End. The best tour visited, ${seq(R.best)}, has length ${M.tinta(C.blu, R.fb)}${R.fb === z ? ": it is optimal" : `, ${GI.num(100 * (R.fb - z) / z, 1)}\\,\\% above \\(z(I) = ${z}\\)`}.`);
+      else if (k === K) nota = T(`Fine. Il miglior giro visitato, ${seq(R.best)}, è lungo ${M.tinta(C.blu, R.fb)}${R.fb === z ? ": è ottimo" : `, \\(${GI.num(100 * (R.fb - z) / z, 1)}\\,\\%\\) sopra \\(z(I) = ${z}\\)`}.`,
+        `End. The best tour visited, ${seq(R.best)}, has length ${M.tinta(C.blu, R.fb)}${R.fb === z ? ": it is optimal" : `, \\(${GI.num(100 * (R.fb - z) / z, 1)}\\,\\%\\) above \\(z(I) = ${z}\\)`}.`);
       else if (E.fermo) nota = T("Tutte le mosse sono tabu e nessuna soddisfa l'aspirazione: la ricerca si ferma.", "Every move is tabu and none satisfies the aspiration criterion: the search stops.");
       else {
         const m = E.vicini[E.sc], peggio = E.de > 0 ? T(" (peggiora: la tabu search si muove comunque)", " (it is worse: tabu search moves anyway)") : E.de === 0 ? T(" (stessa lunghezza)", " (same length)") : "";

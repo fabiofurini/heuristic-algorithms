@@ -142,10 +142,10 @@ extra_javascript:
   - https://cdn.jsdelivr.net/npm/jsxgraph@1.10.1/distrib/jsxgraphcore.js
   - javascripts/interattivi.js?v=2687ca69e3
   - javascripts/gi-comune.js?v=40df75e3e5
-  - javascripts/gi-oc-0.js?v=30a21b81a8
+  - javascripts/gi-oc-0.js?v=bba7b765ee
   - javascripts/gi-oc-a.js?v=bcbc333a91
   - javascripts/gi-oc-b.js?v=bec7102113
-  - javascripts/gi-oc-f.js?v=bfc6dc79f0
+  - javascripts/gi-oc-f.js?v=f66a4dfe0f
   - javascripts/quiz.js?v=be7fae2b85
 
 

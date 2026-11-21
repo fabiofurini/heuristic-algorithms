@@ -31,9 +31,9 @@ Prerequisites: [Combinatorial Optimization](https://fabiofurini.github.io/combin
 <!-- collana-app -->
 ## Try it now
 
-The TSP with nearest neighbour and 2-opt: the tour is built city by city, then 2-opt improves it; drag the cities in the plane.
+Simulated annealing on a 20-city TSP: the best tour found over the optimal one and the curve of the tour length, which accepts worse tours while the temperature is high. Press «Run» to follow it one iteration at a time, or switch to tabu search.
 
-<div class="gi" data-grafico="oc-tsp"></div>
+<div class="gi" data-grafico="oc-meta-tsp" data-vetrina="2"></div>
 
 [:material-gesture-tap: More apps in the lab](lab/index.md){ .md-button }
 <!-- /collana-app -->
