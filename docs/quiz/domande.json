@@ -12780,6 +12780,1206 @@
     ],
     "spiegazione": "Time depends on the computer and its load, the work measured by the solver does not: with a single thread the runs repeat identically. The limit does not change what the heuristics do."
    }
+  },
+  {
+   "id": "eh-f-427",
+   "livello": "facile",
+   "capitolo": "heuristics",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/heuristics/#14-classificazione-degli-algoritmi-euristici",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/heuristics/#14-classification-of-heuristic-algorithms"
+   },
+   "corretta": 3,
+   "it": {
+    "testo": "Quale classe di euristiche costruisce una sola soluzione, un elemento alla volta, senza mai rivedere una scelta?",
+    "opzioni": [
+     "La ricerca locale da una soluzione",
+     "Le metaeuristiche, a partire da un ottimo",
+     "Le euristiche basate sulla PLI",
+     "Le euristiche costruttive"
+    ],
+    "spiegazione": "È la definizione delle euristiche costruttive. La ricerca locale modifica una soluzione completa, le metaeuristiche guidano la ricerca locale, le euristiche MIP usano un modello e un solver."
+   },
+   "en": {
+    "testo": "Which class of heuristics builds a single solution, one element at a time, never revising a choice?",
+    "opzioni": [
+     "Local search from a solution",
+     "Metaheuristics, from a local optimum",
+     "MIP-based heuristics",
+     "Constructive heuristics"
+    ],
+    "spiegazione": "It is the definition of constructive heuristics. Local search modifies a complete solution, metaheuristics guide local search, MIP heuristics use a model and a solver."
+   }
+  },
+  {
+   "id": "eh-f-428",
+   "livello": "facile",
+   "capitolo": "heuristics",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/heuristics/#15-rappresentazione-delle-soluzioni-e-spazio-di-ricerca",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/heuristics/#15-solution-representation-and-search-space"
+   },
+   "corretta": 2,
+   "it": {
+    "testo": "Che cos'è lo spazio di ricerca di un'euristica?",
+    "opzioni": [
+     "L'insieme dei vicini di una soluzione",
+     "Il tempo di calcolo concesso all'euristica",
+     "Gli oggetti descritti dalla rappresentazione",
+     "L'insieme delle soluzioni ottime"
+    ],
+    "spiegazione": "La rappresentazione è la struttura dati delle soluzioni; lo spazio di ricerca è l'insieme di tutti gli oggetti che può descrivere, che può contenere anche oggetti non ammissibili."
+   },
+   "en": {
+    "testo": "What is the search space of a heuristic?",
+    "opzioni": [
+     "The set of neighbours of a solution",
+     "The running time allowed to the heuristic",
+     "The objects the representation describes",
+     "The set of the optimal solutions"
+    ],
+    "spiegazione": "The representation is the data structure of the solutions; the search space is the set of all the objects it can describe, which may also contain infeasible objects."
+   }
+  },
+  {
+   "id": "eh-f-429",
+   "livello": "facile",
+   "capitolo": "heuristics",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/heuristics/#15-rappresentazione-delle-soluzioni-e-spazio-di-ricerca",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/heuristics/#15-solution-representation-and-search-space"
+   },
+   "corretta": 1,
+   "it": {
+    "testo": "Lo zaino 0/1 con $n$ oggetti è rappresentato da un vettore binario $\\vet x\\in\\{0,1\\}^n$. Quanti oggetti contiene lo spazio di ricerca?",
+    "opzioni": [
+     "$\\binom{n}{2}$",
+     "$2^n$",
+     "$n!$",
+     "$n^2$"
+    ],
+    "spiegazione": "Ogni oggetto è dentro o fuori: $2^n$ vettori, ammissibili o no. $n!$ conta le permutazioni, la rappresentazione naturale del TSP."
+   },
+   "en": {
+    "testo": "The 0/1 knapsack with $n$ items is represented by a binary vector $\\vet x\\in\\{0,1\\}^n$. How many objects does the search space contain?",
+    "opzioni": [
+     "$\\binom{n}{2}$",
+     "$2^n$",
+     "$n!$",
+     "$n^2$"
+    ],
+    "spiegazione": "Each item is in or out: $2^n$ vectors, feasible or not. $n!$ counts the permutations, the natural representation of the TSP."
+   }
+  },
+  {
+   "id": "eh-f-430",
+   "livello": "facile",
+   "capitolo": "heuristics",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/heuristics/#17-intensificazione-e-diversificazione",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/heuristics/#17-intensification-and-diversification"
+   },
+   "corretta": 0,
+   "it": {
+    "testo": "Che cosa si intende per intensificazione in un algoritmo euristico?",
+    "opzioni": [
+     "Cercare vicino alle soluzioni buone trovate",
+     "Spostarsi in regioni dello spazio non ancora esplorate",
+     "Calcolare un bound duale più forte",
+     "Aumentare il numero delle istanze di prova"
+    ],
+    "spiegazione": "Intensificare è scendere verso il fondo della valle corrente; la diversificazione porta in regioni nuove. La ricerca locale è pura intensificazione."
+   },
+   "en": {
+    "testo": "What is meant by intensification in a heuristic algorithm?",
+    "opzioni": [
+     "Searching near the good solutions found",
+     "Moving to regions of the space not explored yet",
+     "Computing a stronger dual bound",
+     "Increasing the number of test instances"
+    ],
+    "spiegazione": "Intensifying is moving down toward the bottom of the current valley; diversification leads to new regions. Local search is pure intensification."
+   }
+  },
+  {
+   "id": "eh-f-431",
+   "livello": "facile",
+   "capitolo": "heuristics",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/heuristics/#17-intensificazione-e-diversificazione",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/heuristics/#17-intensification-and-diversification"
+   },
+   "corretta": 3,
+   "it": {
+    "testo": "Un'euristica diversifica troppo e intensifica poco. Che cosa succede?",
+    "opzioni": [
+     "Resta intrappolata nella prima valle",
+     "Trova sempre l'ottimo globale",
+     "Si ferma subito in un ottimo locale",
+     "Vaga senza scendere in fondo a una valle"
+    ],
+    "spiegazione": "Troppa diversificazione fa vagare la ricerca senza mai arrivare al fondo di una valle; troppa intensificazione la intrappola nella prima. Ogni metaeuristica bilancia le due."
+   },
+   "en": {
+    "testo": "A heuristic diversifies too much and intensifies too little. What happens?",
+    "opzioni": [
+     "It stays trapped in the first valley",
+     "It always finds the global optimum",
+     "It stops at once at a local optimum",
+     "It wanders, never reaching a valley bottom"
+    ],
+    "spiegazione": "Too much diversification makes the search wander without ever reaching the bottom of a valley; too much intensification traps it in the first one. Every metaheuristic balances the two."
+   }
+  },
+  {
+   "id": "eh-f-432",
+   "livello": "facile",
+   "capitolo": "heuristics",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/heuristics/#sez-sec-evaluation",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/heuristics/#sez-sec-evaluation"
+   },
+   "corretta": 2,
+   "it": {
+    "testo": "Con che cosa si misura la qualità di un'euristica su un'istanza di cui non si conosce il valore ottimo?",
+    "opzioni": [
+     "Con il numero di iterazioni eseguite",
+     "Con il tempo di calcolo e basta",
+     "Con il gap rispetto al miglior bound duale",
+     "Con l'errore relativo rispetto all'ottimo"
+    ],
+    "spiegazione": "Senza il valore ottimo l'errore relativo non si calcola: si usa il gap rispetto al miglior bound duale disponibile, che è un limite superiore dell'errore."
+   },
+   "en": {
+    "testo": "How is the quality of a heuristic measured on an instance whose optimal value is unknown?",
+    "opzioni": [
+     "By the number of iterations performed",
+     "By the running time alone",
+     "By the gap with respect to the best dual bound",
+     "By the relative error with respect to the optimum"
+    ],
+    "spiegazione": "Without the optimal value the relative error cannot be computed: the gap with respect to the best available dual bound is used, which is an upper bound on the error."
+   }
+  },
+  {
+   "id": "eh-f-433",
+   "livello": "facile",
+   "capitolo": "heuristics",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/heuristics/#sez-sec-evaluation",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/heuristics/#sez-sec-evaluation"
+   },
+   "corretta": 1,
+   "it": {
+    "testo": "Perché l'analisi sperimentale di un'euristica deve usare un insieme di istanze grande e vario?",
+    "opzioni": [
+     "Per ottenere una garanzia sul caso peggiore",
+     "Per non trarre conclusioni valide solo su poche istanze",
+     "Perché su istanze piccole non termina",
+     "Perché il gap si calcola solo su molte istanze"
+    ],
+    "spiegazione": "Un'euristica può andare bene su alcune istanze e male su altre: poche istanze danno conclusioni non generali. Le garanzie sul caso peggiore vengono dall'analisi teorica, non dagli esperimenti."
+   },
+   "en": {
+    "testo": "Why must the experimental analysis of a heuristic use a large and varied set of instances?",
+    "opzioni": [
+     "To obtain a worst-case guarantee",
+     "To avoid conclusions that hold only on a few instances",
+     "Because on small instances it does not terminate",
+     "Because the gap is defined only on many instances"
+    ],
+    "spiegazione": "A heuristic may behave well on some instances and badly on others: few instances give conclusions that are not general. Worst-case guarantees come from theoretical analysis, not from experiments."
+   }
+  },
+  {
+   "id": "eh-f-434",
+   "livello": "teorema",
+   "capitolo": "constructive-heuristics",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/constructive-heuristics/scheduling-su-macchine-parallele-prima-i-lavori-piu-lunghi/#box-10-prop-graham69",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/constructive-heuristics/scheduling-on-parallel-machines-longest-jobs-first/#box-10-prop-graham69"
+   },
+   "corretta": 1,
+   "it": {
+    "testo": "$P\\,||\\,C_{\\max}$ con $m=2$ macchine: $LPT$ trova makespan $14$. Che cosa si deduce dalla garanzia $LPT(I)\\le(\\frac43-\\frac1{3m})z(I)$?",
+    "opzioni": [
+     "$z(I)\\le 12$",
+     "$z(I)\\ge 12$",
+     "$z(I)\\ge 10{,}5$",
+     "$z(I)\\ge 7$"
+    ],
+    "spiegazione": "Con $m=2$ il fattore è $\\frac43-\\frac16=\\frac76$: $z(I)\\ge14\\cdot\\frac67=12$. $10{,}5$ usa il fattore $\\frac43$, $7$ il fattore $2$; la garanzia dà un bound inferiore su $z(I)$."
+   },
+   "en": {
+    "testo": "$P\\,||\\,C_{\\max}$ with $m=2$ machines: $LPT$ finds makespan $14$. What follows from the guarantee $LPT(I)\\le(\\frac43-\\frac1{3m})z(I)$?",
+    "opzioni": [
+     "$z(I)\\le 12$",
+     "$z(I)\\ge 12$",
+     "$z(I)\\ge 10.5$",
+     "$z(I)\\ge 7$"
+    ],
+    "spiegazione": "With $m=2$ the factor is $\\frac43-\\frac16=\\frac76$: $z(I)\\ge14\\cdot\\frac67=12$. $10.5$ uses the factor $\\frac43$, $7$ the factor $2$; the guarantee gives a lower bound on $z(I)$."
+   }
+  },
+  {
+   "id": "eh-f-435",
+   "livello": "teorema",
+   "capitolo": "constructive-heuristics",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/constructive-heuristics/scheduling-su-macchine-parallele-prima-i-lavori-piu-lunghi/#box-8-prop-graham66",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/constructive-heuristics/scheduling-on-parallel-machines-longest-jobs-first/#box-8-prop-graham66"
+   },
+   "corretta": 0,
+   "it": {
+    "testo": "$P\\,||\\,C_{\\max}$ con $m=2$ e tempi $t=(1,1,2)$ nell'ordine della lista: $LIST$ assegna ogni lavoro alla macchina meno carica. Quanto vale $LIST(I)/z(I)$?",
+    "opzioni": [
+     "$\\frac32=2-\\frac1m$",
+     "$\\frac43$, meno della garanzia",
+     "$2$, più della garanzia",
+     "$1$: $LIST$ è ottimo"
+    ],
+    "spiegazione": "I due lavori corti vanno uno per macchina, poi il lavoro lungo dà makespan $3$; l'ottimo è $2$ ($\\{1,1\\}$ e $\\{2\\}$). Il rapporto $\\frac32=2-\\frac12$: la garanzia è raggiunta."
+   },
+   "en": {
+    "testo": "$P\\,||\\,C_{\\max}$ with $m=2$ and times $t=(1,1,2)$ in the order of the list: $LIST$ assigns each job to the least loaded machine. What is $LIST(I)/z(I)$?",
+    "opzioni": [
+     "$\\frac32=2-\\frac1m$",
+     "$\\frac43$, below the guarantee",
+     "$2$, above the guarantee",
+     "$1$: $LIST$ is optimal"
+    ],
+    "spiegazione": "The two short jobs go one per machine, then the long job gives makespan $3$; the optimum is $2$ ($\\{1,1\\}$ and $\\{2\\}$). The ratio $\\frac32=2-\\frac12$: the guarantee is attained."
+   }
+  },
+  {
+   "id": "eh-f-436",
+   "livello": "teorema",
+   "capitolo": "constructive-heuristics",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/constructive-heuristics/colorazione-dei-vertici-greedy-e-dsatur/#box-18-prop-GCDelta",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/constructive-heuristics/vertex-coloring-greedy-and-dsatur/#box-18-prop-GCDelta"
+   },
+   "corretta": 3,
+   "it": {
+    "testo": "Sul grafo completo $K_6$ quanti colori usa la colorazione greedy $GC$, e come si confronta con il bound $\\Delta(G)+1$?",
+    "opzioni": [
+     "$5$: un colore meno del bound",
+     "$6$: uno più del bound",
+     "$2$: il grafo è bipartito",
+     "$6$: il bound è raggiunto"
+    ],
+    "spiegazione": "In $K_6$ tutti i vertici sono adiacenti: servono $6$ colori, e $\\Delta(K_6)+1=5+1=6$. Il bound $\\Delta+1$ non si può migliorare in generale."
+   },
+   "en": {
+    "testo": "On the complete graph $K_6$ how many colors does the greedy coloring $GC$ use, and how does it compare with the bound $\\Delta(G)+1$?",
+    "opzioni": [
+     "$5$: one color below the bound",
+     "$6$: one above the bound",
+     "$2$: the graph is bipartite",
+     "$6$: the bound is attained"
+    ],
+    "spiegazione": "In $K_6$ all the vertices are adjacent: $6$ colors are needed, and $\\Delta(K_6)+1=5+1=6$. The bound $\\Delta+1$ cannot be improved in general."
+   }
+  },
+  {
+   "id": "eh-f-437",
+   "livello": "teorema",
+   "capitolo": "constructive-heuristics",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/constructive-heuristics/colorazione-dei-vertici-greedy-e-dsatur/#sez-sec-DSATUR",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/constructive-heuristics/vertex-coloring-greedy-and-dsatur/#sez-sec-DSATUR"
+   },
+   "corretta": 2,
+   "it": {
+    "testo": "Quanti colori usa $DSATUR$ su un grafo bipartito con almeno uno spigolo?",
+    "opzioni": [
+     "Dipende dalla lista iniziale",
+     "Esattamente $\\frac n2$",
+     "Esattamente $2$",
+     "Al più $\\Delta(G)+1$, non meno"
+    ],
+    "spiegazione": "$DSATUR$ è esatto sui grafi bipartiti (Brélaz, 1979): usa $2$ colori, mentre il greedy con una lista cattiva può usarne $\\frac n2$ (grafo a corona)."
+   },
+   "en": {
+    "testo": "How many colors does $DSATUR$ use on a bipartite graph with at least one edge?",
+    "opzioni": [
+     "It depends on the initial list",
+     "Exactly $\\frac n2$",
+     "Exactly $2$",
+     "At most $\\Delta(G)+1$, not fewer"
+    ],
+    "spiegazione": "$DSATUR$ is exact on bipartite graphs (Brélaz, 1979): it uses $2$ colors, while the greedy with a bad list may use $\\frac n2$ (crown graph)."
+   }
+  },
+  {
+   "id": "eh-f-438",
+   "livello": "teorema",
+   "capitolo": "constructive-heuristics",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/constructive-heuristics/colorazione-dei-vertici-greedy-e-dsatur/#sez-sec-GC",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/constructive-heuristics/vertex-coloring-greedy-and-dsatur/#sez-sec-GC"
+   },
+   "corretta": 1,
+   "it": {
+    "testo": "Per ogni grafo $G$ esiste una lista dei vertici con cui la colorazione greedy usa $\\chi(G)$ colori. Perché?",
+    "opzioni": [
+     "Perché il grafo ha sempre $\\chi(G)=2$",
+     "Basta seguire le classi di una colorazione ottima",
+     "Perché $GC$ usa sempre $\\Delta(G)+1$ colori",
+     "Perché ogni lista dà lo stesso risultato"
+    ],
+    "spiegazione": "Con i vertici in ordine di classe di una colorazione ottima, $GC$ non usa mai un colore oltre $\\chi(G)$. Trovare quella lista è però difficile quanto colorare il grafo."
+   },
+   "en": {
+    "testo": "For every graph $G$ there is a list of the vertices for which the greedy coloring uses $\\chi(G)$ colors. Why?",
+    "opzioni": [
+     "Because the graph always has $\\chi(G)=2$",
+     "Follow the classes of an optimal coloring",
+     "Because $GC$ always uses $\\Delta(G)+1$ colors",
+     "Because every list gives the same result"
+    ],
+    "spiegazione": "With the vertices in the class order of an optimal coloring, $GC$ never uses a color beyond $\\chi(G)$. Finding that list, however, is as hard as coloring the graph."
+   }
+  },
+  {
+   "id": "eh-f-439",
+   "livello": "teorema",
+   "capitolo": "constructive-heuristics",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/constructive-heuristics/il-problema-dello-zaino-0-1-quale-ordinamento/#sez-sec-KP",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/constructive-heuristics/the-0-1-knapsack-problem-which-order/#sez-sec-KP"
+   },
+   "corretta": 0,
+   "it": {
+    "testo": "Zaino 0/1 con $c=100$, oggetto $1$ con $p_1=2$, $w_1=1$ e oggetto $2$ con $p_2=w_2=100$. Il greedy per efficienza prende l'oggetto $1$ e poi l'oggetto $2$ non entra. Che cosa mostra l'istanza?",
+    "opzioni": [
+     "Il greedy per efficienza non ha garanzia costante",
+     "Il greedy è ottimo quando i pesi sono diversi",
+     "Il rilassamento lineare vale $2$",
+     "Il greedy per profitto è sempre peggiore"
+    ],
+    "spiegazione": "Il greedy vale $2$, l'ottimo $100$: allungando l'istanza ($p_2=w_2=c=M$) il rapporto cresce senza limite. Il rilassamento vale $2+\\frac{99}{100}\\cdot100=101$."
+   },
+   "en": {
+    "testo": "0/1 knapsack with $c=100$, item $1$ with $p_1=2$, $w_1=1$ and item $2$ with $p_2=w_2=100$. The greedy by efficiency takes item $1$ and then item $2$ does not fit. What does the instance show?",
+    "opzioni": [
+     "The greedy by efficiency has no constant guarantee",
+     "The greedy is optimal when the weights differ",
+     "The linear relaxation is worth $2$",
+     "The greedy by profit is always worse"
+    ],
+    "spiegazione": "The greedy is worth $2$, the optimum $100$: stretching the instance ($p_2=w_2=c=M$) the ratio grows without bound. The relaxation is worth $2+\\frac{99}{100}\\cdot100=101$."
+   }
+  },
+  {
+   "id": "eh-f-440",
+   "livello": "ipotesi",
+   "capitolo": "constructive-heuristics",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/constructive-heuristics/scheduling-su-macchine-parallele-prima-i-lavori-piu-lunghi/#box-8-prop-graham66",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/constructive-heuristics/scheduling-on-parallel-machines-longest-jobs-first/#box-8-prop-graham66"
+   },
+   "corretta": 3,
+   "it": {
+    "testo": "Per quali liste e quali macchine vale la garanzia di Graham $LIST(I)\\le(2-\\frac1m)z(I)$?",
+    "opzioni": [
+     "Solo per liste ordinate per tempo",
+     "Solo con due macchine",
+     "Anche con macchine di velocità diverse",
+     "Per ogni lista, con macchine identiche"
+    ],
+    "spiegazione": "La dimostrazione vale per qualunque ordine dei lavori, su $m$ macchine identiche; ordinare per tempo non crescente ($LPT$) dà la garanzia migliore $\\frac43-\\frac1{3m}$."
+   },
+   "en": {
+    "testo": "For which lists and which machines does Graham's guarantee $LIST(I)\\le(2-\\frac1m)z(I)$ hold?",
+    "opzioni": [
+     "Only for lists sorted by time",
+     "Only with two machines",
+     "Also with machines of different speeds",
+     "For every list, with identical machines"
+    ],
+    "spiegazione": "The proof holds for any order of the jobs, on $m$ identical machines; sorting by non-increasing time ($LPT$) gives the better guarantee $\\frac43-\\frac1{3m}$."
+   }
+  },
+  {
+   "id": "eh-f-441",
+   "livello": "ipotesi",
+   "capitolo": "constructive-heuristics",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/constructive-heuristics/colorazione-dei-vertici-greedy-e-dsatur/#sez-sec-DSATUR",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/constructive-heuristics/vertex-coloring-greedy-and-dsatur/#sez-sec-DSATUR"
+   },
+   "corretta": 2,
+   "it": {
+    "testo": "$DSATUR$ colora per primo il vertice di saturazione massima. Che cos'è la saturazione di un vertice?",
+    "opzioni": [
+     "Il numero dei suoi vicini non colorati",
+     "Il più piccolo colore libero per lui",
+     "I colori diversi fra i suoi vicini",
+     "Il numero dei suoi vicini"
+    ],
+    "spiegazione": "La saturazione conta i colori distinti già usati dai vicini; a parità si sceglie il vertice di grado massimo. Il numero di vicini è il grado."
+   },
+   "en": {
+    "testo": "$DSATUR$ first colors the vertex of maximum saturation. What is the saturation of a vertex?",
+    "opzioni": [
+     "The number of its uncolored neighbours",
+     "The smallest color free for it",
+     "The distinct colors among its neighbours",
+     "The number of its neighbours"
+    ],
+    "spiegazione": "The saturation counts the distinct colors already used by the neighbours; ties are broken by maximum degree. The number of neighbours is the degree."
+   }
+  },
+  {
+   "id": "eh-f-442",
+   "livello": "ipotesi",
+   "capitolo": "constructive-heuristics",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/constructive-heuristics/il-problema-del-commesso-viaggiatore-accodare-o-inserire/#sez-sec-MSNN",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/constructive-heuristics/the-travelling-salesman-problem-append-or-insert/#sez-sec-MSNN"
+   },
+   "corretta": 1,
+   "it": {
+    "testo": "Il nearest neighbour multi-start ripete il metodo da ogni città di partenza e tiene il giro migliore. Su che cosa si basa?",
+    "opzioni": [
+     "Serve per calcolare un bound duale",
+     "Il giro dipende dalla città di partenza",
+     "Il nearest neighbour è casuale",
+     "Ogni partenza dà lo stesso giro"
+    ],
+    "spiegazione": "Il metodo è deterministico ma il giro cambia con la città iniziale: provarle tutte costa $n$ volte di più e non peggiora mai il risultato della partenza dalla città $1$."
+   },
+   "en": {
+    "testo": "Multi-start nearest neighbour repeats the method from every starting city and keeps the best tour. What is it based on?",
+    "opzioni": [
+     "It is needed to compute a dual bound",
+     "The tour depends on the starting city",
+     "Nearest neighbour is random",
+     "Every start gives the same tour"
+    ],
+    "spiegazione": "The method is deterministic but the tour changes with the starting city: trying all of them costs $n$ times more and never gives a worse result than the start from city $1$."
+   }
+  },
+  {
+   "id": "eh-f-443",
+   "livello": "ipotesi",
+   "capitolo": "constructive-heuristics",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/constructive-heuristics/il-problema-del-commesso-viaggiatore-accodare-o-inserire/#sez-sec-INS",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/constructive-heuristics/the-travelling-salesman-problem-append-or-insert/#sez-sec-INS"
+   },
+   "corretta": 0,
+   "it": {
+    "testo": "Nelle euristiche di inserimento per il TSP, su che cosa si inserisce ogni nuova città?",
+    "opzioni": [
+     "Su un ciclo sulle città già inserite",
+     "Su un cammino che parte dalla città $1$",
+     "Su un albero ricoprente delle città",
+     "Su un accoppiamento delle città"
+    ],
+    "spiegazione": "Si parte da un piccolo sottogiro e ogni città si inserisce fra due città consecutive del ciclo corrente, al costo $d_{ik}+d_{kj}-d_{ij}$; il nearest neighbour invece accoda a un cammino."
+   },
+   "en": {
+    "testo": "In insertion heuristics for the TSP, into what is each new city inserted?",
+    "opzioni": [
+     "Into a cycle on the cities already inserted",
+     "Into a path starting at city $1$",
+     "Into a spanning tree of the cities",
+     "Into a matching of the cities"
+    ],
+    "spiegazione": "One starts from a small subtour and each city is inserted between two consecutive cities of the current cycle, at cost $d_{ik}+d_{kj}-d_{ij}$; nearest neighbour instead appends to a path."
+   }
+  },
+  {
+   "id": "eh-f-444",
+   "livello": "ipotesi",
+   "capitolo": "constructive-heuristics",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/constructive-heuristics/look-ahead-e-regret/#sez-sec-REG",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/constructive-heuristics/look-ahead-and-regret/#sez-sec-REG"
+   },
+   "corretta": 3,
+   "it": {
+    "testo": "L'inserimento con regret sceglie la città con il regret massimo. Come si definisce il regret di una città $q$?",
+    "opzioni": [
+     "Il costo di inserimento più piccolo",
+     "La distanza dalla città più vicina",
+     "La somma dei costi di inserimento",
+     "Il secondo costo di inserimento meno il primo"
+    ],
+    "spiegazione": "$reg_q=\\Delta^2_q-\\Delta^1_q$: quanto si perde se il posto migliore per $q$ viene occupato. Si inserisce prima la città che perderebbe di più aspettando."
+   },
+   "en": {
+    "testo": "Regret insertion chooses the city of maximum regret. How is the regret of a city $q$ defined?",
+    "opzioni": [
+     "The smallest insertion cost",
+     "The distance from the nearest city",
+     "The sum of the insertion costs",
+     "The second insertion cost minus the first"
+    ],
+    "spiegazione": "$reg_q=\\Delta^2_q-\\Delta^1_q$: how much is lost if the best place for $q$ is taken. The city that would lose most by waiting is inserted first."
+   }
+  },
+  {
+   "id": "eh-f-445",
+   "livello": "ipotesi",
+   "capitolo": "constructive-heuristics",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/constructive-heuristics/costruzione-randomizzata/#sez-sec-RCL",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/constructive-heuristics/randomized-construction/#sez-sec-RCL"
+   },
+   "corretta": 2,
+   "it": {
+    "testo": "Perché si rende casuale un'euristica costruttiva, scegliendo a caso fra i candidati migliori?",
+    "opzioni": [
+     "Per ridurre il tempo di una costruzione",
+     "Per avere un bound duale",
+     "Per avere soluzioni diverse",
+     "Per renderla esatta"
+    ],
+    "spiegazione": "Una costruzione deterministica dà sempre la stessa soluzione; con la scelta casuale fra i migliori candidati ogni esecuzione dà una soluzione diversa, e si tiene la migliore (è la base di GRASP)."
+   },
+   "en": {
+    "testo": "Why is a constructive heuristic randomized, choosing at random among the best candidates?",
+    "opzioni": [
+     "To reduce the time of one construction",
+     "To obtain a dual bound",
+     "To get different solutions",
+     "To make it exact"
+    ],
+    "spiegazione": "A deterministic construction always gives the same solution; with the random choice among the best candidates each run gives a different solution, and the best one is kept (it is the basis of GRASP)."
+   }
+  },
+  {
+   "id": "eh-f-446",
+   "livello": "teorema",
+   "capitolo": "metaheuristics",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/metaheuristics/come-uscire-da-un-ottimo-locale/#sez-sec-sa",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/metaheuristics/how-to-escape-from-a-local-optimum/#sez-sec-sa"
+   },
+   "corretta": 0,
+   "it": {
+    "testo": "Simulated annealing: fissato un peggioramento $\\delta>0$, come si comporta la probabilità di accettarlo quando $T\\to0$?",
+    "opzioni": [
+     "Tende a $0$, come una discesa",
+     "Tende a $1$: si accetta ogni vicino",
+     "Resta $e^{-\\delta}$",
+     "Tende a $\\frac12$"
+    ],
+    "spiegazione": "$e^{-\\delta/T}\\to0$ per $T\\to0$: l'algoritmo diventa una discesa (randomizzata). Per $T\\to\\infty$ invece $e^{-\\delta/T}\\to1$ e si accetta quasi tutto."
+   },
+   "en": {
+    "testo": "Simulated annealing: for a fixed worsening $\\delta>0$, how does the probability of accepting it behave as $T\\to0$?",
+    "opzioni": [
+     "It tends to $0$, like a descent",
+     "It tends to $1$: every neighbour is accepted",
+     "It stays $e^{-\\delta}$",
+     "It tends to $\\frac12$"
+    ],
+    "spiegazione": "$e^{-\\delta/T}\\to0$ as $T\\to0$: the algorithm becomes a (randomized) descent. As $T\\to\\infty$ instead $e^{-\\delta/T}\\to1$ and almost everything is accepted."
+   }
+  },
+  {
+   "id": "eh-f-447",
+   "livello": "teorema",
+   "capitolo": "metaheuristics",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/metaheuristics/iterated-local-search/#sez-sec-ils",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/metaheuristics/iterated-local-search/#sez-sec-ils"
+   },
+   "corretta": 3,
+   "it": {
+    "testo": "Iterated local search con il criterio che accetta ogni nuovo ottimo locale, anche peggiore. Che cosa fa la ricerca?",
+    "opzioni": [
+     "Intensifica: accetta solo ottimi migliori",
+     "Diventa una ricerca locale semplice",
+     "Si ferma al primo ottimo locale",
+     "Diversifica: una passeggiata fra ottimi locali"
+    ],
+    "spiegazione": "Accettare solo ottimi migliori intensifica; accettarli tutti diversifica, perché la ricerca si sposta di valle in valle. Criteri intermedi accettano un ottimo peggiore con una probabilità, come in $SA$."
+   },
+   "en": {
+    "testo": "Iterated local search with the criterion that accepts every new local optimum, even a worse one. What does the search do?",
+    "opzioni": [
+     "It intensifies: it accepts only better optima",
+     "It becomes a plain local search",
+     "It stops at the first local optimum",
+     "It diversifies: a walk among local optima"
+    ],
+    "spiegazione": "Accepting only better optima intensifies; accepting all of them diversifies, because the search moves from valley to valley. Intermediate criteria accept a worse optimum with a probability, as in $SA$."
+   }
+  },
+  {
+   "id": "eh-f-448",
+   "livello": "teorema",
+   "capitolo": "metaheuristics",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/metaheuristics/variable-neighbourhood-search/#sez-sec-vns",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/metaheuristics/variable-neighbourhood-search/#sez-sec-vns"
+   },
+   "corretta": 2,
+   "it": {
+    "testo": "Nella variable neighbourhood search, che cosa succede a $k$ quando la soluzione ottenuta con lo shaking e la ricerca locale è migliore della corrente?",
+    "opzioni": [
+     "Si scarta e $k$ torna a $1$",
+     "Si tiene e $k$ resta uguale",
+     "Diventa la corrente e $k$ torna a $1$",
+     "Diventa la corrente e $k$ cresce di $1$"
+    ],
+    "spiegazione": "Dopo un miglioramento si riparte dall'intorno più piccolo per intensificare; dopo un insuccesso $k$ cresce (fino a $k_{\\max}$) per diversificare."
+   },
+   "en": {
+    "testo": "In variable neighbourhood search, what happens to $k$ when the solution obtained by shaking and local search is better than the current one?",
+    "opzioni": [
+     "It is discarded and $k$ goes back to $1$",
+     "It is kept and $k$ stays the same",
+     "It becomes current and $k$ goes back to $1$",
+     "It becomes current and $k$ grows by $1$"
+    ],
+    "spiegazione": "After an improvement the search restarts from the smallest neighbourhood to intensify; after a failure $k$ grows (up to $k_{\\max}$) to diversify."
+   }
+  },
+  {
+   "id": "eh-f-449",
+   "livello": "teorema",
+   "capitolo": "metaheuristics",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/metaheuristics/large-neighbourhood-search/#sez-sec-lns",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/metaheuristics/large-neighbourhood-search/#sez-sec-lns"
+   },
+   "corretta": 1,
+   "it": {
+    "testo": "Large neighbourhood search con distruzione di tutti gli $n$ elementi e riparazione esatta. Che cosa fa la prima iterazione?",
+    "opzioni": [
+     "Calcola solo un bound duale",
+     "Risolve l'istanza all'ottimo",
+     "Restituisce la soluzione di partenza",
+     "Fa una mossa 2-opt"
+    ],
+    "spiegazione": "Se si toglie tutto, la riparazione esatta deve risolvere l'istanza intera: l'intorno contiene tutte le soluzioni. Per questo $q$ si tiene piccolo, così la riparazione resta veloce."
+   },
+   "en": {
+    "testo": "Large neighbourhood search with destruction of all the $n$ elements and exact repair. What does the first iteration do?",
+    "opzioni": [
+     "It only computes a dual bound",
+     "It solves the instance to optimality",
+     "It returns the starting solution",
+     "It performs a 2-opt move"
+    ],
+    "spiegazione": "If everything is removed, the exact repair must solve the whole instance: the neighbourhood contains all the solutions. This is why $q$ is kept small, so that the repair stays fast."
+   }
+  },
+  {
+   "id": "eh-f-450",
+   "livello": "teorema",
+   "capitolo": "metaheuristics",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/metaheuristics/tabu-search/#sez-sec-ts",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/metaheuristics/tabu-search/#sez-sec-ts"
+   },
+   "corretta": 0,
+   "it": {
+    "testo": "Tabu search parte da un ottimo locale e si sposta sempre sul miglior vicino non tabu. Come può migliorare la miglior soluzione trovata?",
+    "opzioni": [
+     "Attraversando soluzioni peggiori fino a un'altra valle",
+     "Accettando i peggioramenti con probabilità $e^{-\\delta/T}$",
+     "Ripartendo da una soluzione casuale",
+     "Risolvendo un sotto-MIP"
+    ],
+    "spiegazione": "Dal fondo della valle il miglior vicino non tabu è peggiore, e la lista tabu impedisce di tornare indietro: la ricerca risale e scende in un'altra valle. La regola probabilistica è quella di $SA$."
+   },
+   "en": {
+    "testo": "Tabu search starts from a local optimum and always moves to the best non-tabu neighbour. How can it improve the best solution found?",
+    "opzioni": [
+     "By crossing worse solutions to another valley",
+     "By accepting worsenings with probability $e^{-\\delta/T}$",
+     "By restarting from a random solution",
+     "By solving a sub-MIP"
+    ],
+    "spiegazione": "From the bottom of the valley the best non-tabu neighbour is worse, and the tabu list prevents going back: the search climbs out and descends into another valley. The probabilistic rule is that of $SA$."
+   }
+  },
+  {
+   "id": "eh-f-451",
+   "livello": "teorema",
+   "capitolo": "metaheuristics",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/metaheuristics/grasp/#sez-sec-grasp",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/metaheuristics/grasp/#sez-sec-grasp"
+   },
+   "corretta": 3,
+   "it": {
+    "testo": "Che cosa restituisce GRASP dopo le sue iterazioni di costruzione randomizzata e ricerca locale?",
+    "opzioni": [
+     "L'ultimo ottimo locale trovato",
+     "La soluzione greedy deterministica",
+     "La media delle soluzioni trovate",
+     "Il miglior ottimo locale trovato"
+    ],
+    "spiegazione": "Ogni iterazione costruisce una soluzione con la lista ristretta dei candidati e la migliora con la ricerca locale; GRASP tiene il miglior ottimo locale di tutte le iterazioni."
+   },
+   "en": {
+    "testo": "What does GRASP return after its iterations of randomized construction and local search?",
+    "opzioni": [
+     "The last local optimum found",
+     "The deterministic greedy solution",
+     "The average of the solutions found",
+     "The best local optimum found"
+    ],
+    "spiegazione": "Each iteration builds a solution with the restricted candidate list and improves it by local search; GRASP keeps the best local optimum over all the iterations."
+   }
+  },
+  {
+   "id": "eh-f-452",
+   "livello": "ipotesi",
+   "capitolo": "metaheuristics",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/metaheuristics/tabu-search/#sez-sec-ts",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/metaheuristics/tabu-search/#sez-sec-ts"
+   },
+   "corretta": 2,
+   "it": {
+    "testo": "Perché la lista tabu memorizza attributi delle mosse (per esempio «il lavoro $j$ ha lasciato la macchina $h$») invece delle soluzioni visitate?",
+    "opzioni": [
+     "Le soluzioni visitate non sono ammissibili",
+     "Così la tenure non serve più",
+     "Confrontare soluzioni intere costa troppo",
+     "Gli attributi vietano meno soluzioni"
+    ],
+    "spiegazione": "Confrontare ogni vicino con tutte le soluzioni visitate è troppo costoso. Gli attributi vietano anzi più del necessario (anche soluzioni mai viste), e per questo serve il criterio di aspirazione."
+   },
+   "en": {
+    "testo": "Why does the tabu list store attributes of the moves (for instance «job $j$ has left machine $h$») instead of the visited solutions?",
+    "opzioni": [
+     "The visited solutions are not feasible",
+     "So the tenure is no longer needed",
+     "Comparing whole solutions costs too much",
+     "Attributes forbid fewer solutions"
+    ],
+    "spiegazione": "Comparing each neighbour with all the visited solutions is too expensive. Attributes actually forbid more than needed (even solutions never seen), and this is why the aspiration criterion is needed."
+   }
+  },
+  {
+   "id": "eh-f-453",
+   "livello": "ipotesi",
+   "capitolo": "metaheuristics",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/metaheuristics/come-uscire-da-un-ottimo-locale/#sez-sec-sa-param",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/metaheuristics/how-to-escape-from-a-local-optimum/#sez-sec-sa-param"
+   },
+   "corretta": 1,
+   "it": {
+    "testo": "Perché il simulated annealing con raffreddamento geometrico $T\\leftarrow\\alpha T$ ha bisogno di una temperatura minima $T_{\\min}$?",
+    "opzioni": [
+     "Serve a calcolare il bound duale",
+     "$\\alpha^kT_0$ non arriva mai a $0$",
+     "Sotto $T_{\\min}$ la regola di Metropolis non vale",
+     "Con $T$ piccolo non si accettano miglioramenti"
+    ],
+    "spiegazione": "Con $0<\\alpha<1$ la temperatura decresce ma resta positiva: serve un criterio d'arresto, come $T\\le T_{\\min}$. I miglioramenti si accettano a ogni temperatura."
+   },
+   "en": {
+    "testo": "Why does simulated annealing with geometric cooling $T\\leftarrow\\alpha T$ need a minimum temperature $T_{\\min}$?",
+    "opzioni": [
+     "It is needed to compute the dual bound",
+     "$\\alpha^kT_0$ never reaches $0$",
+     "Below $T_{\\min}$ the Metropolis rule fails",
+     "With a small $T$ no improvement is accepted"
+    ],
+    "spiegazione": "With $0<\\alpha<1$ the temperature decreases but stays positive: a stopping rule is needed, such as $T\\le T_{\\min}$. Improvements are accepted at every temperature."
+   }
+  },
+  {
+   "id": "eh-f-454",
+   "livello": "ipotesi",
+   "capitolo": "metaheuristics",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/metaheuristics/large-neighbourhood-search/#sez-sec-alns",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/metaheuristics/large-neighbourhood-search/#sez-sec-alns"
+   },
+   "corretta": 0,
+   "it": {
+    "testo": "Nella large neighbourhood search adattiva (ALNS), come si scelgono gli operatori di distruzione e di riparazione?",
+    "opzioni": [
+     "Con pesi dati dal successo passato",
+     "Sempre gli stessi due operatori",
+     "In ordine fisso, a turno",
+     "Con il criterio di aspirazione"
+    ],
+    "spiegazione": "ALNS tiene un peso per ogni operatore, che cresce quando l'operatore produce soluzioni buone: gli operatori che funzionano meglio sull'istanza vengono scelti più spesso."
+   },
+   "en": {
+    "testo": "In adaptive large neighbourhood search (ALNS), how are the destroy and repair operators chosen?",
+    "opzioni": [
+     "With weights from their past success",
+     "Always the same two operators",
+     "In a fixed order, in turn",
+     "By the aspiration criterion"
+    ],
+    "spiegazione": "ALNS keeps a weight for every operator, which grows when the operator produces good solutions: the operators that work better on the instance are chosen more often."
+   }
+  },
+  {
+   "id": "eh-f-455",
+   "livello": "ipotesi",
+   "capitolo": "metaheuristics",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/metaheuristics/grasp/#sez-sec-grasp",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/metaheuristics/grasp/#sez-sec-grasp"
+   },
+   "corretta": 3,
+   "it": {
+    "testo": "Oltre alla scelta casuale, che cosa serve alla fase di costruzione di GRASP?",
+    "opzioni": [
+     "Una soluzione ammissibile di partenza",
+     "Una lista tabu delle mosse",
+     "Una temperatura e un raffreddamento",
+     "Una funzione greedy che valuta i candidati"
+    ],
+    "spiegazione": "La lista ristretta dei candidati raccoglie i migliori secondo una funzione greedy (per lo zaino, l'efficienza); la scelta casuale avviene fra quelli."
+   },
+   "en": {
+    "testo": "Besides the random choice, what does the construction phase of GRASP need?",
+    "opzioni": [
+     "A feasible starting solution",
+     "A tabu list of the moves",
+     "A temperature and a cooling schedule",
+     "A greedy function scoring the candidates"
+    ],
+    "spiegazione": "The restricted candidate list collects the best candidates according to a greedy function (for the knapsack, the efficiency); the random choice is made among them."
+   }
+  },
+  {
+   "id": "eh-f-456",
+   "livello": "teorema",
+   "capitolo": "mip-heuristics-classical",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/mip-heuristics-classical/#sez-sec-submip",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/mip-heuristics-classical/#sez-sec-submip"
+   },
+   "corretta": 0,
+   "it": {
+    "testo": "Zaino 0/1: incumbent $\\bar{\\vet x}=(1,0,1,0)$ e soluzione del rilassamento $\\tilde{\\vet x}=(1,\\frac14,1,0)$. Quali variabili restano libere nel sotto-MIP di RINS?",
+    "opzioni": [
+     "Solo $x_2$",
+     "$x_2$ e $x_4$",
+     "Tutte tranne $x_1$",
+     "Nessuna"
+    ],
+    "spiegazione": "RINS fissa le variabili con lo stesso valore in $\\bar{\\vet x}$ e $\\tilde{\\vet x}$: $x_1=1$, $x_3=1$, $x_4=0$. Resta libera solo $x_2$, frazionaria nel rilassamento."
+   },
+   "en": {
+    "testo": "0/1 knapsack: incumbent $\\bar{\\vet x}=(1,0,1,0)$ and solution of the relaxation $\\tilde{\\vet x}=(1,\\frac14,1,0)$. Which variables remain free in the RINS sub-MIP?",
+    "opzioni": [
+     "Only $x_2$",
+     "$x_2$ and $x_4$",
+     "All except $x_1$",
+     "None"
+    ],
+    "spiegazione": "RINS fixes the variables with the same value in $\\bar{\\vet x}$ and $\\tilde{\\vet x}$: $x_1=1$, $x_3=1$, $x_4=0$. Only $x_2$ remains free, fractional in the relaxation."
+   }
+  },
+  {
+   "id": "eh-f-457",
+   "livello": "teorema",
+   "capitolo": "mip-heuristics-classical",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/mip-heuristics-classical/#sez-sec-submip",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/mip-heuristics-classical/#sez-sec-submip"
+   },
+   "corretta": 3,
+   "it": {
+    "testo": "Local branching per lo zaino 0/1 con il vincolo $\\Delta(\\vet x,\\bar{\\vet x})\\le1$. Quali soluzioni esplora il sotto-MIP?",
+    "opzioni": [
+     "Solo i vettori con un oggetto in più",
+     "Tutte le soluzioni ammissibili",
+     "I vettori che differiscono in due variabili",
+     "$\\bar{\\vet x}$ e i vettori a distanza $1$"
+    ],
+    "spiegazione": "$\\Delta\\le1$ permette di cambiare al più una variabile: è l'intorno flip della ricerca locale (togliere o aggiungere un oggetto), più l'incumbent stesso."
+   },
+   "en": {
+    "testo": "Local branching for the 0/1 knapsack with the constraint $\\Delta(\\vet x,\\bar{\\vet x})\\le1$. Which solutions does the sub-MIP explore?",
+    "opzioni": [
+     "Only the vectors with one more item",
+     "All the feasible solutions",
+     "The vectors differing in two variables",
+     "$\\bar{\\vet x}$ and the vectors at distance $1$"
+    ],
+    "spiegazione": "$\\Delta\\le1$ allows changing at most one variable: it is the flip neighbourhood of local search (removing or adding one item), plus the incumbent itself."
+   }
+  },
+  {
+   "id": "eh-f-458",
+   "livello": "teorema",
+   "capitolo": "mip-heuristics-classical",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/mip-heuristics-classical/#sez-sec-submip",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/mip-heuristics-classical/#sez-sec-submip"
+   },
+   "corretta": 2,
+   "it": {
+    "testo": "Proximity search, problema di minimo: ogni sotto-MIP chiede $f(\\vet x)\\le f(\\bar{\\vet x})-\\theta$. Di quanto migliora l'incumbent un'iterazione riuscita?",
+    "opzioni": [
+     "Fino al valore ottimo",
+     "Di al più $\\theta$",
+     "Di almeno $\\theta$",
+     "Di esattamente $1$"
+    ],
+    "spiegazione": "La nuova soluzione soddisfa il vincolo di miglioramento, quindi vale al più $f(\\bar{\\vet x})-\\theta$: il miglioramento è almeno $\\theta$, e può essere maggiore."
+   },
+   "en": {
+    "testo": "Proximity search, minimization problem: each sub-MIP requires $f(\\vet x)\\le f(\\bar{\\vet x})-\\theta$. By how much does a successful iteration improve the incumbent?",
+    "opzioni": [
+     "Up to the optimal value",
+     "By at most $\\theta$",
+     "By at least $\\theta$",
+     "By exactly $1$"
+    ],
+    "spiegazione": "The new solution satisfies the improvement constraint, hence it is worth at most $f(\\bar{\\vet x})-\\theta$: the improvement is at least $\\theta$, and it may be larger."
+   }
+  },
+  {
+   "id": "eh-f-459",
+   "livello": "teorema",
+   "capitolo": "mip-heuristics-classical",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/mip-heuristics-classical/#sez-sec-diving",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/mip-heuristics-classical/#sez-sec-diving"
+   },
+   "corretta": 1,
+   "it": {
+    "testo": "Durante il diving di un problema di massimo, come cambia il valore del rilassamento lineare a ogni fissazione?",
+    "opzioni": [
+     "Aumenta di almeno $1$",
+     "Non aumenta mai",
+     "Non diminuisce mai",
+     "Resta sempre uguale"
+    ],
+    "spiegazione": "Fissare una variabile aggiunge un vincolo al rilassamento: la regione si restringe e il valore ottimo di un problema di massimo non può crescere."
+   },
+   "en": {
+    "testo": "During the diving of a maximization problem, how does the value of the linear relaxation change at each fixing?",
+    "opzioni": [
+     "It increases by at least $1$",
+     "It never increases",
+     "It never decreases",
+     "It always stays the same"
+    ],
+    "spiegazione": "Fixing a variable adds a constraint to the relaxation: the region shrinks and the optimal value of a maximization problem cannot grow."
+   }
+  },
+  {
+   "id": "eh-f-460",
+   "livello": "teorema",
+   "capitolo": "mip-heuristics-classical",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/mip-heuristics-classical/#sez-sec-rf",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/mip-heuristics-classical/#sez-sec-rf"
+   },
+   "corretta": 0,
+   "it": {
+    "testo": "Relax-and-fix con un solo blocco che contiene tutte le variabili intere: che cosa risolve?",
+    "opzioni": [
+     "Il MIP intero, all'ottimo",
+     "Solo il rilassamento lineare",
+     "Un problema non ammissibile",
+     "Un sotto-MIP con le variabili fissate"
+    ],
+    "spiegazione": "Con un blocco solo non c'è niente da rilassare né da fissare: il primo e unico sotto-problema è il MIP stesso. I blocchi servono a rendere i sotto-problemi più piccoli."
+   },
+   "en": {
+    "testo": "Relax-and-fix with a single block containing all the integer variables: what does it solve?",
+    "opzioni": [
+     "The whole MIP, to optimality",
+     "Only the linear relaxation",
+     "An infeasible problem",
+     "A sub-MIP with fixed variables"
+    ],
+    "spiegazione": "With a single block there is nothing to relax or to fix: the first and only subproblem is the MIP itself. Blocks are used to make the subproblems smaller."
+   }
+  },
+  {
+   "id": "eh-f-461",
+   "livello": "teorema",
+   "capitolo": "mip-heuristics-classical",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/mip-heuristics-classical/#sez-sec-rf",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/mip-heuristics-classical/#sez-sec-rf"
+   },
+   "corretta": 3,
+   "it": {
+    "testo": "Perché fix-and-optimize non peggiora mai la soluzione corrente?",
+    "opzioni": [
+     "Perché risolve ogni volta il MIP intero",
+     "Perché rilassa i blocchi successivi",
+     "Perché accetta peggioramenti con una probabilità",
+     "La soluzione corrente è ammissibile per ogni sotto-MIP"
+    ],
+    "spiegazione": "Le variabili fuori dal blocco sono fissate ai valori della soluzione corrente, che resta ammissibile per il sotto-MIP: l'ottimo del sotto-MIP è almeno buono quanto lei."
+   },
+   "en": {
+    "testo": "Why does fix-and-optimize never worsen the current solution?",
+    "opzioni": [
+     "Because it solves the whole MIP every time",
+     "Because it relaxes the next blocks",
+     "Because it accepts worsenings with a probability",
+     "The current solution is feasible for every sub-MIP"
+    ],
+    "spiegazione": "The variables outside the block are fixed at the values of the current solution, which stays feasible for the sub-MIP: the optimum of the sub-MIP is at least as good."
+   }
+  },
+  {
+   "id": "eh-f-462",
+   "livello": "ipotesi",
+   "capitolo": "mip-heuristics-classical",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/mip-heuristics-classical/#sez-sec-gurobi",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/mip-heuristics-classical/#sez-sec-gurobi"
+   },
+   "corretta": 2,
+   "it": {
+    "testo": "Che cosa deve soddisfare una soluzione passata al solver come MIP start per diventare subito l'incumbent?",
+    "opzioni": [
+     "Avere tutte le variabili a $0$",
+     "Avere valore uguale al bound duale",
+     "Essere ammissibile per il modello",
+     "Essere ottima per il rilassamento"
+    ],
+    "spiegazione": "Il solver controlla il MIP start: se è ammissibile diventa l'incumbent (bound primale) e serve a potare; un punto non ammissibile non dà un bound primale."
+   },
+   "en": {
+    "testo": "What must a solution passed to the solver as a MIP start satisfy to become the incumbent at once?",
+    "opzioni": [
+     "Have all the variables at $0$",
+     "Have value equal to the dual bound",
+     "Be feasible for the model",
+     "Be optimal for the relaxation"
+    ],
+    "spiegazione": "The solver checks the MIP start: if it is feasible it becomes the incumbent (primal bound) and is used for pruning; an infeasible point gives no primal bound."
+   }
+  },
+  {
+   "id": "eh-f-463",
+   "livello": "ipotesi",
+   "capitolo": "mip-heuristics-classical",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/mip-heuristics-classical/#sez-sec-submip",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/mip-heuristics-classical/#sez-sec-submip"
+   },
+   "corretta": 1,
+   "it": {
+    "testo": "Il vincolo di local branching $\\Delta(\\vet x,\\bar{\\vet x})\\le k$ si scrive come vincolo lineare sulle sole variabili originali quando:",
+    "opzioni": [
+     "Il rilassamento ha soluzione intera",
+     "Le variabili sono binarie",
+     "Il problema è di massimo",
+     "$k$ è pari"
+    ],
+    "spiegazione": "Per variabili binarie $|x_j-\\bar x_j|$ è $x_j$ o $1-x_j$: la somma è lineare. Per variabili intere generali servono variabili ausiliarie."
+   },
+   "en": {
+    "testo": "The local branching constraint $\\Delta(\\vet x,\\bar{\\vet x})\\le k$ is a linear constraint on the original variables only when:",
+    "opzioni": [
+     "The relaxation has an integer solution",
+     "The variables are binary",
+     "The problem is a maximization problem",
+     "$k$ is even"
+    ],
+    "spiegazione": "For binary variables $|x_j-\\bar x_j|$ is $x_j$ or $1-x_j$: the sum is linear. For general integer variables auxiliary variables are needed."
+   }
+  },
+  {
+   "id": "eh-f-464",
+   "livello": "ipotesi",
+   "capitolo": "mip-heuristics-classical",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/mip-heuristics-classical/#sez-sec-submip",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/mip-heuristics-classical/#sez-sec-submip"
+   },
+   "corretta": 0,
+   "it": {
+    "testo": "In quale caso RINS non può dare una soluzione diversa dall'incumbent?",
+    "opzioni": [
+     "Se $\\bar{\\vet x}$ e $\\tilde{\\vet x}$ coincidono",
+     "Se il rilassamento ha una variabile frazionaria",
+     "Se l'incumbent è migliore del rilassamento",
+     "Se il problema è di massimo"
+    ],
+    "spiegazione": "Se le due soluzioni coincidono, RINS fissa tutte le variabili intere ai valori dell'incumbent: il sotto-MIP non ha altre soluzioni (e $\\tilde{\\vet x}$ intera dimostra l'ottimo)."
+   },
+   "en": {
+    "testo": "In which case can RINS not give a solution different from the incumbent?",
+    "opzioni": [
+     "If $\\bar{\\vet x}$ and $\\tilde{\\vet x}$ coincide",
+     "If the relaxation has a fractional variable",
+     "If the incumbent is better than the relaxation",
+     "If the problem is a maximization problem"
+    ],
+    "spiegazione": "If the two solutions coincide, RINS fixes all the integer variables at the values of the incumbent: the sub-MIP has no other solution (and an integer $\\tilde{\\vet x}$ proves optimality)."
+   }
+  },
+  {
+   "id": "eh-f-465",
+   "livello": "ipotesi",
+   "capitolo": "mip-heuristics-classical",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/mip-heuristics-classical/#sez-sec-rf",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/mip-heuristics-classical/#sez-sec-rf"
+   },
+   "corretta": 3,
+   "it": {
+    "testo": "Come si scelgono i blocchi di variabili in fix-and-optimize?",
+    "opzioni": [
+     "Un solo blocco con tutte le variabili",
+     "Un blocco per ogni vincolo",
+     "A caso, ogni volta diversi",
+     "Piccoli, con sotto-MIP veloci"
+    ],
+    "spiegazione": "Ogni blocco dà un sotto-MIP che il solver deve risolvere in fretta, ma un blocco troppo piccolo migliora poco: la scelta bilancia le due cose (per esempio, una finestra di periodi nel lot sizing)."
+   },
+   "en": {
+    "testo": "How are the blocks of variables chosen in fix-and-optimize?",
+    "opzioni": [
+     "A single block with all the variables",
+     "One block for each constraint",
+     "At random, each time different",
+     "Small, with fast sub-MIPs"
+    ],
+    "spiegazione": "Each block gives a sub-MIP that the solver must solve quickly, but a block that is too small improves little: the choice balances the two (for instance, a window of periods in lot sizing)."
+   }
+  },
+  {
+   "id": "eh-f-466",
+   "livello": "ipotesi",
+   "capitolo": "mip-heuristics-classical",
+   "link": {
+    "it": "https://fabiofurini.github.io/algoritmi-euristici/mip-heuristics-classical/#sez-sec-diving",
+    "en": "https://fabiofurini.github.io/heuristic-algorithms/mip-heuristics-classical/#sez-sec-diving"
+   },
+   "corretta": 2,
+   "it": {
+    "testo": "Il diving può finire in un rilassamento non ammissibile. Perché non può tornare indietro come il branch-and-bound?",
+    "opzioni": [
+     "Perché il solver non lo permette",
+     "Perché non usa il rilassamento lineare",
+     "Segue un solo ramo, senza esplorare l'albero",
+     "Perché le variabili fissate sono continue"
+    ],
+    "spiegazione": "Il diving è un'euristica: scende lungo un solo ramo dell'albero fissando variabili. Varianti con un piccolo backtracking esistono, ma il diving puro si ferma senza soluzione."
+   },
+   "en": {
+    "testo": "Diving may end in an infeasible relaxation. Why can it not go back as branch-and-bound does?",
+    "opzioni": [
+     "Because the solver does not allow it",
+     "Because it does not use the linear relaxation",
+     "It follows a single branch, without exploring the tree",
+     "Because the fixed variables are continuous"
+    ],
+    "spiegazione": "Diving is a heuristic: it goes down a single branch of the tree fixing variables. Variants with a little backtracking exist, but pure diving stops without a solution."
+   }
   }
  ]
 }

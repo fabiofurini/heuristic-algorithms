@@ -544,4 +544,34 @@ window.QUIZ_GEN = window.QUIZ_GEN || {};
       };
     }
   });
+  // ---- arrotondamento per difetto della soluzione del rilassamento dello zaino (cap. 5, 21/11/2026)
+  add({
+    id: "eh-g-kp-round", livello: "facile", capitolo: "mip-heuristics-classical",
+    link: L("mip-heuristics-classical/#sez-sec-rounding", "mip-heuristics-classical/#sez-sec-rounding"),
+    genera: function (rng, lingua) {
+      var n = 5, it0 = [];
+      for (var j = 0; j < n; j++) { var wj = ri(rng, 2, 8); it0.push([wj * ri(rng, 1, 4) + ri(rng, 0, 3), wj]); }
+      it0.sort(function (a, b) { return b[0] * a[1] - a[0] * b[1]; });   // efficienza non crescente
+      var p = it0.map(function (x) { return x[0]; }), w = it0.map(function (x) { return x[1]; });
+      for (j = 1; j < n; j++) if (p[j - 1] * w[j] === p[j] * w[j - 1]) return null;   // niente pari merito
+      var c = ri(rng, 8, sum(w) - 2), tot = 0, s = -1;
+      for (j = 0; j < n; j++) { if (tot + w[j] > c) { s = j; break; } tot += w[j]; }
+      if (s <= 0) return null;
+      var rc = c - tot; if (rc === 0) return null;
+      var P0 = 0; for (j = 0; j < s; j++) P0 += p[j];
+      var lp = fr(P0 * w[s] + rc * p[s], w[s]);
+      var gr = P0, cap = rc; for (j = s + 1; j < n; j++) if (w[j] <= cap) { gr += p[j]; cap -= w[j]; }
+      var b = build(rng, num(P0), [num(P0 + p[s]), numF(lp), num(gr), num(Math.floor(lp.n / lp.d) + 1)]);
+      if (!b) return null;
+      var xt = range1(n).map(function (k) { return k - 1 < s ? "1" : (k - 1 === s ? frTex(fr(rc, w[s])) : "0"); });
+      return {
+        testo: T(lingua, "Zaino 0/1 con capacità $c=" + c + "$ e oggetti già ordinati per efficienza $p_j/w_j$ non crescente: " + itemTab(lingua, p, w) + ". La soluzione ottima del rilassamento lineare di $\\mathrm{ILP}_{\\mathrm{KP}}$ è $\\tilde{\\vet x}=" + vec(xt) + "$. Quanto vale il profitto della soluzione $\\lfloor\\tilde{\\vet x}\\rfloor$ ottenuta arrotondando per difetto?",
+          "0/1 knapsack with capacity $c=" + c + "$ and items already sorted by non-increasing efficiency $p_j/w_j$: " + itemTab(lingua, p, w) + ". The optimal solution of the linear relaxation of $\\mathrm{ILP}_{\\mathrm{KP}}$ is $\\tilde{\\vet x}=" + vec(xt) + "$. What is the profit of the solution $\\lfloor\\tilde{\\vet x}\\rfloor$ obtained by rounding down?"),
+        opzioni: b.opzioni, corretta: b.corretta,
+        spiegazione: T(lingua, "Arrotondando per difetto si tengono gli oggetti $1,\\dots," + s + "$ e si toglie l'oggetto frazionario $" + (s + 1) + "$: profitto $" + P0 + "$, ammissibile perché il peso solo diminuisce. $" + frTex(lp) + "$ è il valore del rilassamento; il greedy, che continua dopo l'oggetto che non entra, può fare di più.",
+          "Rounding down keeps items $1,\\dots," + s + "$ and drops the fractional item $" + (s + 1) + "$: profit $" + P0 + "$, feasible because the weight only decreases. $" + frTex(lp) + "$ is the value of the relaxation; the greedy, which continues after the item that does not fit, may do better."),
+        _v: { dati: { p: p, w: w, c: c }, valori: b.valori }
+      };
+    }
+  });
 })();
