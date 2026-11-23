@@ -6,7 +6,7 @@ title: "First improvement and best improvement"
 
 <div class="info-capitolo" markdown>
 
-**Heuristic Algorithms · Chapter 3** · [:material-book-open-variant: Chapter 3: Local search](index.md) · [:material-file-pdf-box: Lecture notes (PDF)](../pdf/lecture-notes-1-heuristic-algorithms.pdf) · [:material-presentation: Slides (1/2)](../pdf/slides-local-search-1.pdf) · [:material-presentation: Slides (2/2)](../pdf/slides-local-search-2.pdf) · [:material-pencil: Exercises: Local search](../exercises/local-search.md) · [:material-gesture-tap: App: TSP: nearest neighbour and 2-opt](../lab/tsp-nn-2opt.md)
+**Part 2 · Combinatorial heuristics · Chapter 3** · [:material-book-open-variant: Chapter 3: Local search](index.md) · [:material-file-pdf-box: Lecture notes (PDF)](../pdf/lecture-notes-1-heuristic-algorithms.pdf) · [:material-presentation: Slides (1/2)](../pdf/slides-local-search-1.pdf) · [:material-presentation: Slides (2/2)](../pdf/slides-local-search-2.pdf) · [:material-pencil: Exercises: Local search](../exercises/local-search.md) · [:material-gesture-tap: App: TSP: nearest neighbour and 2-opt](../lab/tsp-nn-2opt.md)
 
 </div>
 

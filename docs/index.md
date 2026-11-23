@@ -42,59 +42,39 @@ Simulated annealing on a 20-city TSP: the best tour found over the optimal one a
 
 ## The parts of the course
 
-The chapters of the course, the same as in the lecture notes and in the menu.
+The same entries as the menu: each card gives its part and its chapters in the lecture notes.
 
 <div class="grid cards" markdown>
 
--   :material-scale-balance: **1. Heuristic algorithms: definitions**
+-   :material-scale-balance: **Principles**
 
     ---
 
-    *Chapter 1*
+    *Part 1 · Chapter 1*
 
-    The problems and the assumptions · Primal and dual bounds · Classification of heuristic algorithms · Solution representation and search space
+    Definitions
 
-    [:octicons-arrow-right-24: Read the chapter](heuristics.md) · [Exercises](exercises/heuristics.md)
+    [:octicons-arrow-right-24: The chapters](principles.md)
 
--   :material-hammer-wrench: **2. Constructive heuristics**
-
-    ---
-
-    *Chapter 2*
-
-    The problems and the assumptions · The greedy paradigm · The 0/1 knapsack problem: which order? · The bin packing problem: first sort, then pack
-
-    [:octicons-arrow-right-24: Read the chapter](constructive-heuristics/index.md) · [Exercises](exercises/constructive-heuristics.md)
-
--   :material-magnify: **3. Local search**
+-   :material-hammer-wrench: **Combinatorial heuristics**
 
     ---
 
-    *Chapter 3*
+    *Part 2 · Chapters 2–4*
 
-    The problems, the assumptions and the starting solutions · Local search: the scheme · Neighbourhoods for the four problems · First improvement and best improvement
+    Constructive heuristics · Local search · Metaheuristics
 
-    [:octicons-arrow-right-24: Read the chapter](local-search/index.md) · [Exercises](exercises/local-search.md)
+    [:octicons-arrow-right-24: The chapters](combinatorial-heuristics.md)
 
--   :material-fire: **4. Metaheuristics**
-
-    ---
-
-    *Chapter 4*
-
-    The problems and the assumptions · How to escape from a local optimum · Simulated annealing · Tabu search
-
-    [:octicons-arrow-right-24: Read the chapter](metaheuristics/index.md) · [Exercises](exercises/metaheuristics.md)
-
--   :material-function-variant: **5. MIP heuristics for the classical problems**
+-   :material-function-variant: **MIP heuristics**
 
     ---
 
-    *Chapter 5*
+    *Part 3 · Chapter 5*
 
-    MIP-based heuristics · The problems and their MIP models · Rounding · Diving
+    MIP heuristics
 
-    [:octicons-arrow-right-24: Read the chapter](mip-heuristics-classical.md) · [Exercises](exercises/mip-heuristics-classical.md)
+    [:octicons-arrow-right-24: The chapters](mip-heuristics.md)
 
 </div>
 

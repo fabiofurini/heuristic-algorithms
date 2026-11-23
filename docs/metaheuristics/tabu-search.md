@@ -6,7 +6,7 @@ title: "Tabu search"
 
 <div class="info-capitolo" markdown>
 
-**Heuristic Algorithms · Chapter 4** · [:material-book-open-variant: Chapter 4: Metaheuristics](index.md) · [:material-file-pdf-box: Lecture notes (PDF)](../pdf/lecture-notes-1-heuristic-algorithms.pdf) · [:material-presentation: Slides (1/2)](../pdf/slides-metaheuristics-1.pdf) · [:material-presentation: Slides (2/2)](../pdf/slides-metaheuristics-2.pdf) · [:material-pencil: Exercises: Metaheuristics](../exercises/metaheuristics.md) · [:material-gesture-tap: App: TSP: simulated annealing and tabu search](../lab/simulated-annealing-tabu-search.md)
+**Part 2 · Combinatorial heuristics · Chapter 4** · [:material-book-open-variant: Chapter 4: Metaheuristics](index.md) · [:material-file-pdf-box: Lecture notes (PDF)](../pdf/lecture-notes-1-heuristic-algorithms.pdf) · [:material-presentation: Slides (1/2)](../pdf/slides-metaheuristics-1.pdf) · [:material-presentation: Slides (2/2)](../pdf/slides-metaheuristics-2.pdf) · [:material-pencil: Exercises: Metaheuristics](../exercises/metaheuristics.md) · [:material-gesture-tap: App: TSP: simulated annealing and tabu search](../lab/simulated-annealing-tabu-search.md)
 
 </div>
 

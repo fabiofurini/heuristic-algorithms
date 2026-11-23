@@ -4,7 +4,7 @@
 ## How to use these notes
 
 - **Website and PDF.** Each chapter of the website is a chapter of the lecture notes, with the same numbers and the same colors; long chapters are split into one page per section.
-- **At the top of each chapter** a bar with the PDF of the lecture notes, the slides, the exercises and the apps of the chapter; at the bottom, the link to the exercises.
+- **At the top of each chapter** a bar with the part, the PDF of the lecture notes, the slides, the exercises and the apps of the chapter; at the bottom, the link to the exercises.
 - **The problems.** Definitions, instances and formulations of the problems are in the course [Combinatorial Optimization Problems](https://fabiofurini.github.io/combinatorial-optimization/): the chapters link to them.
 - **The code.** On the pages the algorithms are in pseudo-code; the «Run in Colab» buttons open the notebook with the code in Python and C++.
 
@@ -38,7 +38,7 @@ The boxes have the same colors as in the lecture notes:
 
 All the pages of the website, in the order of the menu: the chapters with their sections and the other pages.
 
-## [Heuristic Algorithms](heuristics.md)
+## [Principles](principles.md)
 
 - **[1. Heuristic algorithms: definitions](heuristics.md)** · [Exercises](exercises/heuristics.md)
     - [1.1 Heuristic algorithms](heuristics.md#11-heuristic-algorithms)
@@ -51,6 +51,9 @@ All the pages of the website, in the order of the menu: the chapters with their 
     - [1.8 How to evaluate a heuristic algorithm](heuristics.md#sez-sec-evaluation)
     - [1.9 Typical mistakes](heuristics.md#19-typical-mistakes)
     - [1.10 In summary](heuristics.md#110-in-summary)
+
+## [Combinatorial heuristics](combinatorial-heuristics.md)
+
 - **[2. Constructive heuristics](constructive-heuristics/index.md)** · [Exercises](exercises/constructive-heuristics.md)
     - [2.1 Constructive heuristics](constructive-heuristics/index.md#sez-sec-constructive)
     - [2.2 The problems and the assumptions](constructive-heuristics/the-problems-and-the-assumptions.md#sez-sec-problems)
@@ -94,6 +97,9 @@ All the pages of the website, in the order of the menu: the chapters with their 
     - [4.11 Comparison and conclusions](metaheuristics/comparison-and-conclusions.md)
     - [4.12 Typical mistakes](metaheuristics/typical-mistakes.md#412-typical-mistakes)
     - [4.13 In summary](metaheuristics/typical-mistakes.md#413-in-summary)
+
+## [MIP heuristics](mip-heuristics.md)
+
 - **[5. MIP heuristics for the classical problems](mip-heuristics-classical.md)** · [Exercises](exercises/mip-heuristics-classical.md)
     - [5.1 MIP-based heuristics](mip-heuristics-classical.md#sez-sec-intro)
     - [5.2 The problems and their MIP models](mip-heuristics-classical.md#sez-sec-models)

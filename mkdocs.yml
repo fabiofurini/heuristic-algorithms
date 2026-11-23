@@ -121,7 +121,7 @@ extra:
 
 extra_css:
   - stylesheets/collana.css
-  - stylesheets/extra.css?v=ff8e75aca3
+  - stylesheets/extra.css?v=76c997ebec
   - https://cdn.jsdelivr.net/npm/jsxgraph@1.10.1/distrib/jsxgraph.css
   - stylesheets/interattivi.css?v=c51ac2286b
   - stylesheets/quiz.css?v=9e3792b41c
@@ -161,8 +161,11 @@ extra_javascript:
 
 nav:
   - Home: index.md
-  - Heuristics:
+  - "Principles":
+      - principles.md
       - "1. Definitions": heuristics.md
+  - "Combinatorial heuristics":
+      - combinatorial-heuristics.md
       - "2. Constructive heuristics":
           - constructive-heuristics/index.md
           - "The problems and the assumptions · The greedy paradigm": constructive-heuristics/the-problems-and-the-assumptions.md
@@ -201,14 +204,19 @@ nav:
           - "Comparison and conclusions": metaheuristics/comparison-and-conclusions.md
           - "Typical mistakes · In summary": metaheuristics/typical-mistakes.md
           - "References": metaheuristics/references.md
+  - "MIP heuristics":
+      - mip-heuristics.md
       - "5. MIP heuristics": mip-heuristics-classical.md
   - Exercises:
       - exercises/index.md
-      - "1. Definitions": exercises/heuristics.md
-      - "2. Constructive heuristics": exercises/constructive-heuristics.md
-      - "3. Local search": exercises/local-search.md
-      - "4. Metaheuristics": exercises/metaheuristics.md
-      - "5. MIP heuristics": exercises/mip-heuristics-classical.md
+      - "Principles":
+          - "1. Definitions": exercises/heuristics.md
+      - "Combinatorial heuristics":
+          - "2. Constructive heuristics": exercises/constructive-heuristics.md
+          - "3. Local search": exercises/local-search.md
+          - "4. Metaheuristics": exercises/metaheuristics.md
+      - "MIP heuristics":
+          - "5. MIP heuristics": exercises/mip-heuristics-classical.md
   - Quiz: self-assessment.md
   - Lab: lab/index.md
   - Downloads:

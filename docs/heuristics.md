@@ -6,7 +6,7 @@ title: "Heuristic algorithms: definitions"
 
 <div class="info-capitolo" markdown>
 
-**Heuristic Algorithms · Chapter 1** · [:material-file-pdf-box: Lecture notes (PDF)](pdf/lecture-notes-1-heuristic-algorithms.pdf) · [:material-presentation: Slides](pdf/slides-heuristics.pdf) · [:material-pencil: Exercises: Definitions](exercises/heuristics.md)
+**Part 1 · Principles · Chapter 1** · [:material-file-pdf-box: Lecture notes (PDF)](pdf/lecture-notes-1-heuristic-algorithms.pdf) · [:material-presentation: Slides](pdf/slides-heuristics.pdf) · [:material-pencil: Exercises: Definitions](exercises/heuristics.md)
 
 </div>
 
